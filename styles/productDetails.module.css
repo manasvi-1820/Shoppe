@@ -54,6 +54,16 @@
   margin-top: 50px;
 }
 
+.descriptionRow {
+  margin-top: -30px;
+}
+.additionalRow {
+  margin-top: -30px;
+}
+.reviewsRow {
+  margin-top: -30px;
+}
+
 .paragraph {
   margin-top: 20px;
   font-family: "DM Sans";
@@ -71,7 +81,6 @@
   font-size: 26px;
   line-height: 35px;
   color: #000000;
-  margin-bottom: 40px;
 }
 
 .additionalDiv {
@@ -100,7 +109,7 @@
   border-bottom: 1px solid #d8d8d8;
 }
 
-.reviewsRow {
+.reviewsDivRow {
   margin-bottom: 100px;
 }
 

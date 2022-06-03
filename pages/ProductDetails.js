@@ -9,10 +9,10 @@ import {
   Col,
   Navbar,
   Form,
-  FormControl,
   Button,
 } from "react-bootstrap";
 import styles from "../styles/productDetails.module.css";
+import styles1 from "../styles/products.module.css";
 import products from "../json/products.json";
 import Products from "../components/Products";
 import Rate from "../components/Rate";
@@ -57,6 +57,7 @@ const ProductDetails = () => {
   return (
     <>
       <Header />
+
       {/* <div className={styles.imageDiv}>
         <img src={product.image} className={styles.productsImage} />
 
@@ -79,6 +80,27 @@ const ProductDetails = () => {
       <div></div> */}
 
       <Container className={styles.productDetailsContainer}>
+        <div className={styles.productDetailsCart}>
+          <Row>
+            <Col xl={7}>hiii</Col>
+            <Col xl={5}>
+              <Rate />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                placerat, augue a volutpat hendrerit, sapien tortor faucibus
+                augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu
+                facilisis consequat sed eu felis.{" "}
+              </p>
+              <h3>
+                SKU: <span>12</span>
+              </h3>
+              <h3>
+                Categories: <span>Fashion, Style</span>
+              </h3>
+            </Col>
+          </Row>
+        </div>
+
         <Navbar>
           <Nav className={styles.productDetails}>
             <Nav.Link
@@ -116,7 +138,7 @@ const ProductDetails = () => {
             </p>
             <div className={styles.descriptionDiv}>
               <h3 className={styles.similarItems}>Similar Items</h3>
-              <Row>
+              <Row className={styles.descriptionRow}>
                 {products.map((item, index) => {
                   if (index < 3) {
                     return (
@@ -126,7 +148,7 @@ const ProductDetails = () => {
                         md={6}
                         sm={6}
                         xs={6}
-                        className={styles.productsCol}
+                        className={styles1.productsCol}
                         key={index + "product"}
                       >
                         <Products item={item} />
@@ -164,7 +186,7 @@ const ProductDetails = () => {
 
             <div className={styles.descriptionDiv}>
               <h3 className={styles.similarItems}>Similar Items</h3>
-              <Row>
+              <Row className={styles.additionalRow}>
                 {products.map((item, index) => {
                   if (index < 3) {
                     return (
@@ -174,7 +196,7 @@ const ProductDetails = () => {
                         md={6}
                         sm={6}
                         xs={6}
-                        className={styles.productsCol}
+                        className={styles1.productsCol}
                         key={index + "product"}
                       >
                         <Products item={item} />
@@ -189,7 +211,7 @@ const ProductDetails = () => {
 
         {reviews && (
           <>
-            <Row className={styles.reviewsRow}>
+            <Row className={styles.reviewsDivRow}>
               <Col xl={6} className={styles.reviewsCol}>
                 <h5>2 Reviews for lira earings</h5>
 
@@ -282,8 +304,8 @@ const ProductDetails = () => {
               </Col>
             </Row>
 
-            <Row>
-              <h3 className={styles.similarItems}>Similar Items</h3>
+            <h3 className={styles.similarItems}>Similar Items</h3>
+            <Row className={styles.reviewsRow}>
               {products.map((item, index) => {
                 if (index < 3) {
                   return (
@@ -293,7 +315,7 @@ const ProductDetails = () => {
                       md={6}
                       sm={6}
                       xs={6}
-                      className={styles.productsCol}
+                      className={styles1.productsCol}
                       key={index + "product"}
                     >
                       <Products item={item} />

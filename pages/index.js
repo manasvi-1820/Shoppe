@@ -13,14 +13,14 @@ export default function Home(props) {
       <GoldBigHoops />
       <Container className={styles.productsContainer}>
         <Row className={styles.productsRow}>
-          {props.titleHide ? (
-            <div className={styles.latestViewAllDiv}>
-              <h3>Shop The Latest</h3>
-              <button>View All</button>
-            </div>
-          ) : (
-            ""
-          )}
+          {/* {props.titleHide ? (
+          <div className={styles.latestViewAllDiv}>
+            <h3>Shop The Latest</h3>
+            <button>View All</button>
+          </div>
+        ) : (
+          ""
+        )} */}
           {products.map((item, index) => {
             return (
               <Col
