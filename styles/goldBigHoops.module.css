@@ -1,0 +1,181 @@
+.goldContainer {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.goldImage {
+  width: 100%;
+}
+
+.sliderDiv {
+  position: relative;
+}
+
+.overLay {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  padding-top: 18%;
+  padding-left: 3%;
+  height: 100%;
+  width: 50%;
+  text-align: start;
+}
+
+.name {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #ffffff;
+}
+
+.price {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 40px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  padding: 10px 30px;
+  background: transparent;
+}
+
+.categories {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .overLay {
+    padding-top: 17%;
+    padding-left: 3%;
+    height: 100%;
+    width: 50%;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .price {
+    font-size: 22px;
+    margin-top: 0px;
+  }
+
+  .button {
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 776px) {
+  .overLay {
+    padding-top: 15%;
+    padding-left: 3%;
+    height: 100%;
+    width: 50%;
+  }
+  .name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .price {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+  .button {
+    margin-top: 0px;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  .categories {
+    display: block;
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .goldRow {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+  }
+  .overLay {
+    padding-top: 34%;
+    padding-left: 3%;
+    height: 100%;
+    width: 50%;
+  }
+  .goldImage {
+    width: 100%;
+    height: 300px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 16px;
+    margin-top: 0px;
+  }
+  .button {
+    margin-top: 0px;
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .goldRow {
+    margin-left: 0% !important;
+  }
+  .overLay {
+    padding-top: 38%;
+    padding-left: 3%;
+    height: 100%;
+    width: 50%;
+  }
+  .goldImage {
+    width: 100%;
+    height: 270px;
+  }
+
+  .name {
+    font-size: 17px;
+    line-height: 10px;
+  }
+  .price {
+    font-size: 14px;
+    margin-top: 0px;
+    line-height: 30px;
+  }
+  .button {
+    margin-top: 0px;
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .overLay {
+    padding-top: 42%;
+    padding-left: 3%;
+    height: 100%;
+    width: 50%;
+  }
+}

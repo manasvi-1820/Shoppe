@@ -1,0 +1,242 @@
+.productDetailsContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 100px;
+}
+
+.productDetails {
+  display: flex;
+  /* border-bottom: 1px solid #d8d8d8; */
+  transform: matrix(0.71, 0, inf, -nan, 0, 0);
+}
+
+.productNavLinks {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  padding-left: 0px !important;
+  margin-right: 60px;
+  color: #707070;
+}
+
+.nav .productNavLinks:hover {
+  color: lightseagreen !important;
+  font-weight: bold;
+}
+
+.nav .productNavLinks.active,
+.nav .productNavLinks.focus {
+  color: red !important;
+  border-bottom: 2px solid #000000;
+  font-weight: bolder !important;
+}
+
+/* .navbar-light .navbar-nav .nav-link:hover {
+  color: lightseagreen !important;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.focus {
+  border-bottom: 2px solid #000000;
+  font-weight: bolder !important;
+} */
+
+.border {
+  width: 100%;
+  margin: auto;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.descriptionDiv {
+  margin-top: 50px;
+}
+
+.paragraph {
+  margin-top: 20px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.similarItems {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.additionalDiv {
+  margin-top: 20px;
+}
+
+.additionalInfo {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.additionalSpan {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.borderLine {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.reviewsRow {
+  margin-bottom: 100px;
+}
+
+.reviewsCol {
+  margin-top: 30px;
+  /* background: blue; */
+}
+
+.reviewsCol h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.mainDiv {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.scarletWitchDiv {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.scarletWitch {
+  display: flex;
+  align-items: baseline;
+}
+
+.scarletWitch h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.scarletWitch span {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #707070;
+}
+
+.scarletWitchDiv p {
+  margin-top: 10px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.reviewsFormCol {
+  margin-top: 30px;
+  padding-left: 30px;
+  /* background: red; */
+}
+
+.reviewsFormCol h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.reviewsFormCol p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: #707070;
+}
+
+.formControl {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+
+.formControl::placeholder {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #707070;
+}
+
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #707070;
+}
+
+.submit {
+  margin-top: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  padding: 10px 30px;
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+.reviewsFormCol h6 {
+  margin-top: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #707070;
+}

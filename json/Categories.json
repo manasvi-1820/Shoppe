@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "button": "Earrings"
+  },
+  {
+    "id": 2,
+    "button": "Necklace"
+  },
+  {
+    "id": 3,
+    "button": "Bracelet"
+  },
+  {
+    "id": 4,
+    "button": "Anklet"
+  },
+  {
+    "id": 5,
+    "button": "Rings"
+  }
+]

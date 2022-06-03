@@ -1,0 +1,56 @@
+.categoriesContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sliderDiv {
+  display: grid !important;
+  justify-content: center;
+}
+
+.button {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  padding: 10px 60px;
+  background: none;
+  /* margin-left: 5px; */
+}
+
+@media (max-width: 550px) {
+  .button {
+    padding: 10px 50px;
+  }
+}
+@media (max-width: 490px) {
+  .button {
+    padding: 10px 45px;
+  }
+}
+@media (max-width: 460px) {
+  .button {
+    padding: 10px 37px;
+  }
+}
+@media (max-width: 420px) {
+  .button {
+    padding: 10px 60px;
+  }
+}
+@media (max-width: 380px) {
+  .button {
+    padding: 10px 50px;
+  }
+}
+@media (max-width: 340px) {
+  .button {
+    padding: 10px 45px;
+  }
+}

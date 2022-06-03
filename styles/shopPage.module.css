@@ -1,0 +1,383 @@
+.shopContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+.shopTheLatest {
+  margin-bottom: 20px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+}
+
+.shop {
+  display: none;
+}
+
+.filtersDiv {
+  display: none;
+}
+
+.searchImageDiv {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+}
+
+.searchImageDiv1 {
+  position: absolute;
+  left: 0% !;
+  top: 15%;
+  right: 0%;
+  /* padding-right: 10px; */
+}
+
+.searchControl {
+  border-radius: 0px;
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  border-bottom: 0.75px solid #707070;
+}
+
+.searchControl::placeholder {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #707070;
+}
+
+.sideBarCol {
+  /* margin-top: 20px; */
+}
+.productsCol {
+  /* margin-top: 20px; */
+}
+
+.shopByDropDown {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.shopBy {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.sortByDropDown {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.sortBy {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.range {
+  margin-top: 40px;
+}
+.rangeDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceRange {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #707070;
+}
+
+.filter {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #a18a68;
+}
+
+.onSaleToogle {
+  margin-top: 30px;
+}
+.inStockToogle {
+  margin-top: 30px;
+}
+
+.onSaleLabel {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.inStockLabel {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+}
+
+@media (max-width: 992px) {
+  .shopContainer {
+    padding-top: 20px;
+    padding-bottom: 200px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .shop {
+    display: block;
+    margin-bottom: 20px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 43px;
+    color: #000000;
+  }
+  .shopTheLatest {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .filtersDiv {
+    display: block;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .filters {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #a18a68;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .shopContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.productsContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.latestViewAllDiv {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.productsContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+}
+
+.productsContainer button {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: capitalize;
+  color: #a18a68;
+  background: none;
+  border: none;
+}
+
+.productsDiv {
+  padding: 20px 20px;
+}
+
+.productsCol {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 40px;
+}
+
+.imageDiv {
+  /* text-align: center; */
+  position: relative;
+}
+
+.productsCol h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  margin-top: 20px;
+}
+
+.productsCol h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: capitalize;
+  color: #a18a68;
+  margin-top: 10px;
+}
+
+.productsImage {
+  width: 100%;
+  height: 100%;
+  /* width: 377px;
+  height: 380px; */
+  border-radius: 8px;
+  /* position: relative; */
+}
+
+.hoverDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  bottom: auto;
+  padding-top: 45%;
+  padding-left: 32%;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.hoverImage {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.imageDiv:hover .hoverDiv {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 4px 4px 0px 0px;
+}
+
+@media (max-width: 776px) {
+  .productsContainer h3 {
+    font-size: 24px;
+  }
+  .productsContainer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .productsCol {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .productsRow {
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+  }
+  .productsContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .productsCol h5 {
+    font-size: 17px;
+    margin-top: 20px;
+    line-height: 20px;
+  }
+  .productsImage {
+    width: 100%;
+    height: 80%;
+  }
+  .productsCol {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .productsContainer h3 {
+    font-size: 22px;
+  }
+  .productsContainer button {
+    font-size: 18px;
+  }
+  .productsCol h5 {
+    line-height: 15px;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  .productsCol h4 {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+  .productsImage {
+    width: 100%;
+    height: 80%;
+  }
+  .productsCol {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .productsContainer h3 {
+    font-size: 18px;
+  }
+  .productsContainer button {
+    font-size: 18px;
+  }
+  .productsCol h5 {
+    line-height: 15px;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+  .productsCol h4 {
+    font-size: 12px;
+    margin-top: 0px;
+  }
+  .productsImage {
+    width: 100%;
+  }
+}
