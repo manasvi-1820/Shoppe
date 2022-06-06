@@ -16,7 +16,8 @@ const Shop = () => {
   // const { id } = useParams();
 
   const Click = (id) => {
-    route.push(`/shop/${id}`);
+    // route.push(`/shop/${id}`);
+    route.push("/ProductDetails");
     console.log("id", id);
   };
 

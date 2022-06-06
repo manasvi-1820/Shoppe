@@ -11,91 +11,237 @@ import {
   Form,
   Button,
 } from "react-bootstrap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styles from "../styles/productDetails.module.css";
 import styles1 from "../styles/products.module.css";
 import products from "../json/products.json";
 import Products from "../components/Products";
 import Rate from "../components/Rate";
+import Image from "next/image";
+import email from "../public/Images/email.png";
+import fb from "../public/Images/fb.png";
+import insta from "../public/Images/insta.png";
+import twitter from "../public/Images/twitter.png";
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState([]);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 767,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 576,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 420,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 2,
+    //     },
+    //   },
+    // ],
+  };
+  // const { id } = useParams();
+  // const [product, setProduct] = useState([]);
+  const [count, setCount] = useState(0);
 
-  const [description, setDescription] = useState();
-  const [additional, setAdditional] = useState();
-  const [reviews, setReviews] = useState();
+  const [description, setDescription] = useState(true);
+  const [additional, setAdditional] = useState(false);
+  const [reviews, setReviews] = useState(false);
 
   const ShowDescription = () => {
-    setDescription(!description);
+    setDescription(true);
     setAdditional(false);
     setReviews(false);
   };
 
   const ShowAdditionalinfo = () => {
-    setAdditional(!additional);
+    setAdditional(true);
     setDescription(false);
     setReviews(false);
   };
 
   const ShowReviews = () => {
-    setReviews(!reviews);
+    setReviews(true);
     setDescription(false);
     setAdditional(false);
   };
 
-  useEffect(() => {
-    // const getProduct = async () => {
-    //   const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-    //   setProduct(await response.json());
-    // };
+  const Increment = () => {
+    setCount(count + 1);
+  };
 
-    // getProduct();
+  const Decrement = () => {
+    setCount(count - 1);
+  };
 
-    setProduct();
-  }, []);
+  // useEffect(() => {
+  //   // const getProduct = async () => {
+  //   //   const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  //   //   setProduct(await response.json());
+  //   // };
+
+  //   // getProduct();
+
+  //   setProduct();
+  // }, []);
 
   return (
     <>
-      <Header />
-
-      {/* <div className={styles.imageDiv}>
-        <img src={product.image} className={styles.productsImage} />
-
-        <div className={styles.hoverDiv}>
-          <div className={styles.hoverImage}>
-            <Image src={cart} width={25} height={25}></Image>
-          </div>
-          <div className={styles.hoverImage}>
-            <Image src={eye} width={32} height={32}></Image>
-          </div>
-          <div className={styles.hoverImage}>
-            <Image src={wishlist} width={25} height={25}></Image>
-          </div>
-        </div>
-      </div>
-
-      <h5>{product.name}</h5>
-      <h4>{product.price}</h4>
-
-      <div></div> */}
+      <Header border={true} />
 
       <Container className={styles.productDetailsContainer}>
         <div className={styles.productDetailsCart}>
           <Row>
-            <Col xl={7}>hiii</Col>
-            <Col xl={5}>
-              <Rate />
-              <p>
+            <Col xl={2} className={styles.sideImageCol}>
+              {products.map((item, index) => {
+                if (index < 1)
+                  return (
+                    <>
+                      <img src={item.image} className={styles.sideImage1} />
+                      <img src={item.image} className={styles.sideImage2} />
+                      <img src={item.image} className={styles.sideImage3} />
+                      <img src={item.image} className={styles.sideImage4} />
+                    </>
+                  );
+              })}
+            </Col>
+
+            <Col xl={5} lg={6} md={12} className={styles.centerImageCol}>
+              <Row>
+                <Slider {...settings}>
+                  {products.map((item, index) => {
+                    if (index < 3)
+                      return (
+                        <>
+                          <img
+                            src={item.image}
+                            className={styles.centerImage}
+                          />
+                        </>
+                      );
+                  })}
+                </Slider>
+              </Row>
+            </Col>
+
+            <Col xl={5} lg={6} md={12} className={styles.cartCol}>
+              {products.map((item, index) => {
+                if (index < 1)
+                  return (
+                    <>
+                      <h5>{item.name}</h5>
+                      <h4>{item.price}</h4>
+                      <button>
+                        <i class="bi bi-share-fill"></i>
+                      </button>
+                    </>
+                  );
+              })}
+
+              <div className={styles.ratingDiv}>
+                <Rate />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p className={styles.customerReviews}>1 customer review</p>
+              </div>
+
+              <p className={styles.loremIpsum}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 placerat, augue a volutpat hendrerit, sapien tortor faucibus
                 augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu
-                facilisis consequat sed eu felis.{" "}
+                facilisis consequat sed eu felis.
               </p>
-              <h3>
-                SKU: <span>12</span>
+
+              <button className={styles.addToCartResponsive}>
+                ADD TO CART
+              </button>
+              <p className={styles.loremIpsumResponsive}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                placerat...
+              </p>
+              <button className={styles.viewMore}>
+                View more <img src="./Images/arrow.svg" />
+              </button>
+
+              <div className={styles.buttonsDiv}>
+                <div className={styles.buttons}>
+                  <button className={styles.minus} onClick={Decrement}>
+                    -
+                  </button>
+                  <div className={styles.count}>{count}</div>
+                  <button className={styles.plus} onClick={Increment}>
+                    +
+                  </button>
+                </div>
+
+                <button className={styles.addToCart}>ADD TO CART</button>
+              </div>
+
+              <div className={styles.imageDiv}>
+                <img src="./Images/IconColor.svg" />
+                <div className={styles.line}></div>
+
+                <div className={styles.images}>
+                  <div className={styles.emailImage}>
+                    <Image
+                      src={email}
+                      width={22}
+                      height={18}
+                      className={styles.emailImage}
+                    ></Image>
+                  </div>
+
+                  <div className={styles.fbImage}>
+                    <Image
+                      src={fb}
+                      width={10}
+                      height={18}
+                      className={styles.fbImage}
+                    ></Image>
+                  </div>
+                  <div className={styles.instaImage}>
+                    <Image
+                      src={insta}
+                      width={18}
+                      height={18}
+                      className={styles.instaImage}
+                    ></Image>
+                  </div>
+                  <div className={styles.twitterImage}>
+                    <Image
+                      src={twitter}
+                      width={20}
+                      height={17}
+                      className={styles.twitterImage}
+                    ></Image>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className={styles.skuCategories}>
+                SKU: &nbsp;&nbsp;<span className={styles.span12}>12</span>
               </h3>
-              <h3>
-                Categories: <span>Fashion, Style</span>
+              <h3 className={styles.skuCategories}>
+                Categories: &nbsp;&nbsp;
+                <span className={styles.spanFashion}>Fashion, Style</span>
               </h3>
             </Col>
           </Row>
