@@ -44,7 +44,7 @@ const Header = (props) => {
                 <Image src={cart} width={23} height={23}></Image>
               </div>
 
-              <Navbar.Toggle aria-controls="navbarScroll" />
+              <Navbar.Toggle aria-controls="navbarScroll" id="navbarScroll" />
             </div>
 
             <Navbar.Collapse id="navbarScroll" className="justify-content-end">

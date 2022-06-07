@@ -168,6 +168,23 @@
     line-height: 20px;
     color: #707070;
   }
+
+  .searchControl:focus,
+  .searchControl:active {
+    padding-left: 30px !important;
+    background: #efefef !important;
+    box-shadow: none !important;
+  }
+  .searchControl:focus .searchControl::placeholder {
+    opacity: 0;
+  }
+  /* 
+  .searchControl:focus,
+  .searchControl:active .searchImageDiv1 {
+    display: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  } */
 }
 
 @media (max-width: 576px) {

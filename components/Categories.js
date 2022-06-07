@@ -10,9 +10,9 @@ const Categories = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    speed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,

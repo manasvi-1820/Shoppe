@@ -33,7 +33,19 @@
   border: none;
   padding-left: 0px;
   border-radius: 0px;
+  /* border-bottom: 1px solid #000000; */
+}
+
+.formControl:focus {
+  box-shadow: none !important;
+}
+
+.inputGroupDiv {
   border-bottom: 1px solid #000000;
+}
+
+.inputGroupDiv:hover {
+  border-bottom: 1px solid #0d6efd !important;
 }
 
 .formControl::placeholder {
@@ -49,8 +61,12 @@
   border: none;
   background: none;
   padding-right: 0px;
-  border-bottom: 1px solid #000000;
+  /* border-bottom: 1px solid #000000; */
   border-radius: 0px;
+}
+
+.inputGroup:focus {
+  border-bottom: 1px solid blue !important;
 }
 
 .copyrightRow {
@@ -81,6 +97,11 @@
   color: #707070;
 }
 
+.span:hover {
+  color: #0d6efd !important;
+  text-decoration: underline !important;
+}
+
 .imageDiv {
   display: flex;
 }
@@ -88,18 +109,42 @@
 .linkedInImage {
   margin-left: 25px;
 }
+
+.linkedInImage:hover {
+  background-image: url("../public/Images/linkedin1.png");
+}
+
 .fbImage {
   margin-left: 25px;
 }
+
+.fbImage:hover {
+  background-image: url("../public/Images/fb1.png");
+}
+
 .instaImage {
   margin-left: 25px;
 }
+
+.instaImage:hover {
+  background-image: url("../public/Images/insta1.png");
+}
+
 .twitterImage {
   margin-left: 25px;
 }
 
+.twitterImage:hover {
+  background-image: url("../public/Images/Twitter1.png");
+}
+
 .checkbox {
   display: none;
+}
+
+.checkbox:hover {
+  color: #47a7f5 !important;
+  border: none !important;
 }
 
 .label {
@@ -109,6 +154,11 @@
   font-size: 14px;
   line-height: 20px;
   color: #000000;
+  margin-top: 10px;
+}
+
+.label:hover {
+  color: #47a7f5 !important;
 }
 
 .followUs {
