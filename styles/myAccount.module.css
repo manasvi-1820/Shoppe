@@ -1,0 +1,213 @@
+.myAccountContainer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.myAccountContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  text-align: center;
+  color: #000000;
+}
+
+.myAccountContainer p {
+  max-width: 500px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin: auto;
+  text-align: center;
+  color: #000000;
+}
+
+.mainDiv {
+  width: 50%;
+  margin: auto;
+}
+
+.form {
+  margin-top: 80px;
+}
+
+.formControlCol {
+  width: 75%;
+  margin: auto;
+}
+.formControlColCheckbox {
+  width: 75%;
+  margin: auto;
+}
+
+.formControl {
+  color: #707070;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+
+.formControl::placeholder {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.formControl:focus,
+.formControl:active {
+  box-shadow: none !important;
+}
+
+.sendButtonDiv {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.sendButton {
+  width: 490px;
+  background: #000000;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.myAccountContainer p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btnDiv {
+  display: flex;
+  background: #efefef;
+  border-radius: 8px;
+  justify-content: center;
+  padding: 5px 0px;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px !important;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0px;
+  width: 49%;
+  gap: 10px;
+  border: none;
+  /* box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+}
+
+.btnSpan {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btnSpan2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #000000;
+}
+@media (max-width: 1399px) {
+  .mainDiv {
+    width: 58%;
+    margin: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .mainDiv {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media (max-width: 992px) {
+  .mainDiv {
+    width: 93%;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .mainDiv {
+    width: 100%;
+    margin: auto;
+  }
+  .btnDiv {
+    padding: 5px 0px;
+    width: 100%;
+    margin-top: 50px !important;
+  }
+  .myAccountContainer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .formControlCol {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px !important;
+  }
+  .formControlColCheckbox {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px !important;
+  }
+  .sendButton {
+    width: 100%;
+  }
+  .sendButtonDiv {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .myAccountContainer p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .myAccountContainer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 420px) {
+  .btn {
+    padding: 10px 0px;
+    width: 49%;
+  }
+  .btnDiv {
+    margin-top: 40px !important;
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "image": "/Images/blog1.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 2,
+    "image": "/Images/blog2.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 3,
+    "image": "/Images/blog3.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 4,
+    "image": "/Images/blog4.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 5,
+    "image": "/Images/blog1.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 6,
+    "image": "/Images/blog2.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 7,
+    "image": "/Images/blog3.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  },
+  {
+    "id": 8,
+    "image": "/Images/blog4.png",
+    "date": "Fashion - October 8, 2020",
+    "title": "Top Trends From Spring",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae libero... ",
+    "button": "Read More"
+  }
+]

@@ -1,0 +1,165 @@
+.contactContainer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.contactContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+  text-align: center;
+}
+
+.contactContainer h4 {
+  display: none;
+}
+
+.contactContainer p {
+  max-width: 561px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  margin: auto;
+  margin-top: 25px !important;
+}
+
+.form {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.formControlRow {
+  justify-content: space-evenly !important;
+}
+
+.formControlColTextarea {
+  margin-top: 50px !important;
+  max-width: 94%;
+}
+
+.formControlCol {
+  max-width: 45% !important;
+  margin-top: 50px !important;
+}
+
+.formControl {
+  color: #707070;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+
+.formControl::placeholder {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.formControl:focus,
+.formControl:active {
+  box-shadow: none !important;
+}
+
+.sendButtonDiv {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sendButton {
+  width: 500px;
+  background: #000000;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .contactContainer h3 {
+    font-size: 30px;
+  }
+
+  .contactContainer p {
+    max-width: 540px;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 25px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .contactContainer h3 {
+    display: none;
+  }
+
+  .contactContainer h4 {
+    display: block;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  .contactContainer p {
+    display: none;
+  }
+
+  .contactContainer {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .form {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .formControlCol {
+    max-width: 100% !important;
+    margin-top: 40px !important;
+  }
+  .formControlColTextarea {
+    margin-top: 40px !important;
+    max-width: 100%;
+  }
+  .sendButtonDiv {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .sendButton {
+    width: 100%;
+  }
+  .formControlRow {
+    display: block !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactContainer {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

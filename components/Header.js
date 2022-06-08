@@ -15,14 +15,20 @@ import styles from "../styles/header.module.css";
 import search from "../public/Images/search.png";
 import cart from "../public/Images/cart.png";
 import profile from "../public/Images/profile.png";
+import { Router, useRouter } from "next/router";
 // import search1 from "../public/Images/search1.png";
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState("");
+  const route = useRouter();
 
   useEffect(() => {
     setIsActive(window.location.pathname);
   }, []);
+
+  const MyAccount = () => {
+    route.push("/MyAccount");
+  };
 
   return (
     <>
@@ -88,7 +94,12 @@ const Header = (props) => {
                     <Image src={cart} width={20} height={20}></Image>
                   </div>
                   <div className={styles.userImage}>
-                    <Image src={profile} width={20} height={20}></Image>
+                    <Image
+                      src={profile}
+                      width={20}
+                      height={20}
+                      onClick={() => MyAccount()}
+                    ></Image>
                   </div>
                 </div>
               </Nav>

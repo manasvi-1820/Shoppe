@@ -1,0 +1,52 @@
+.privacyContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.privacyDiv {
+}
+
+.privacyContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+  text-align: center;
+}
+
+.duisRutrum {
+  max-width: 670px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  margin: auto;
+  margin-top: 20px !important;
+  color: #000000;
+}
+
+.security {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #000000;
+  text-align: center;
+  margin-top: 20px !important;
+}
+
+.cookies {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 25px;
+  color: #000000;
+  text-align: center;
+  margin-top: 20px !important;
+}

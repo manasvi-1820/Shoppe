@@ -15,8 +15,15 @@ import fb from "../public/Images/fb.png";
 import insta from "../public/Images/insta.png";
 import twitter from "../public/Images/twitter.png";
 import arrow from "../public/Images/arrow.png";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const route = useRouter();
+  const PrivacyPolicy = () => {
+    route.push("/PrivacyPolicy");
+  };
+
   return (
     <Container className={styles.footerContainer}>
       <div className={styles.line}></div>
@@ -62,7 +69,10 @@ const Footer = () => {
         <div className={styles.copyrightDiv}>
           <h5 className={styles.copyright}>
             © 2021 Shelly. <span className={styles.span}>Terms of use</span> and
-            <span className={styles.span}> privacy policy.</span>
+            <span className={styles.span} onClick={() => PrivacyPolicy()}>
+              {" "}
+              privacy policy.
+            </span>
           </h5>
 
           <div className={styles.imageDiv}>

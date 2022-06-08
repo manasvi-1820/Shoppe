@@ -1,0 +1,263 @@
+.blogContainer {
+  padding-top: 60px;
+  padding-bottom: 140px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.searchImageDiv {
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+}
+
+.searchImageDiv1 {
+  position: absolute;
+  left: 0% !;
+  top: 15%;
+  right: 0%;
+  /* padding-right: 10px; */
+}
+
+.searchControl {
+  border-radius: 0px;
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.searchControl::placeholder {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #707070;
+}
+
+.searchControl:focus,
+.searchControl:active {
+  box-shadow: none !important;
+}
+
+.blogContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.categories {
+  margin-top: 50px;
+}
+
+.categories h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: capitalize;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.categories p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #707070;
+}
+
+.blogColMain {
+  margin-top: 10px;
+}
+
+.blogCol {
+  margin-bottom: 40px;
+}
+
+.image {
+  width: 100%;
+  height: 320px;
+}
+
+.date {
+  margin-top: 20px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #707070;
+}
+
+.title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.description {
+  margin-top: 10px;
+  max-width: 450px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.button {
+  margin-top: 20px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #a18a68;
+  cursor: pointer;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 7px 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background: none;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.pageButton:hover {
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.pageButton:focus,
+.pageButton:active {
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  .image {
+    width: 100%;
+    height: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .image {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .image {
+    width: 100%;
+    height: 320px;
+  }
+  .blogContainer {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .searchImageDiv {
+    display: none;
+  }
+  .blogColSidebar {
+    order: 2;
+  }
+  .description {
+    margin-top: 10px;
+    max-width: 100%;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #707070;
+  }
+}
+@media (max-width: 576px) {
+  .blogContainer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 420px) {
+  .blogContainer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .blogContainer h3 {
+    font-size: 25px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+  .image {
+    width: 100%;
+    height: 250px;
+  }
+  .date {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .title {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .button {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 350px) {
+  .image {
+    width: 100%;
+    height: 220px;
+  }
+  .title {
+    font-size: 19px;
+  }
+}

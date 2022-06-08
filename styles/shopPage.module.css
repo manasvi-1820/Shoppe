@@ -56,16 +56,19 @@
   color: #707070;
 }
 
-.sideBarCol {
-  /* margin-top: 20px; */
-}
-.productsCol {
-  /* margin-top: 20px; */
+.searchControl:focus,
+.searchControl:active {
+  box-shadow: none !important;
 }
 
 .shopByDropDown {
   margin-top: 30px;
   margin-bottom: 10px;
+}
+
+.shopBy:focus,
+.shopBy:active {
+  box-shadow: none !important;
 }
 
 .shopBy {
@@ -94,6 +97,12 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+.sortBy:focus,
+.sortBy:active {
+  box-shadow: none !important;
+}
+
 .range {
   margin-top: 40px;
 }
