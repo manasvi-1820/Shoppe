@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/Images/comment1.png",
+    "name": "Scarlet withch",
+    "date": "6 May, 2020",
+    "reply": "Reply",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. "
+  },
+  {
+    "id": 2,
+    "image": "/Images/comment2.png",
+    "name": "Kate moss",
+    "date": "6 May, 2020",
+    "reply": "Reply",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."
+  },
+  {
+    "id": 3,
+    "image": "/Images/comment1.png",
+    "name": "Scarlet withch",
+    "date": "6 May, 2020",
+    "reply": "Reply",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+  }
+]

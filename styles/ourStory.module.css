@@ -1,0 +1,131 @@
+.ourStoryContainer {
+  padding-top: 30px;
+  padding-bottom: 140px;
+}
+
+.ourStoryContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+  text-align: center;
+}
+
+.ourStoryContainer h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  margin-top: 20px;
+}
+
+.ourStoryContainer h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  text-align: start;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.ourStoryContainer h2 {
+  display: none;
+}
+
+.image {
+  width: 100%;
+  height: 340px;
+}
+
+.ourStoryContainer p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+  margin-top: 40px;
+}
+
+.ourStoryContainer ul {
+  margin-bottom: 30px;
+}
+
+.ourStoryContainer ul li {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+}
+
+@media (max-width: 992px) {
+  .ourStoryContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ourStoryContainer {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+  }
+  .image {
+    height: 300px;
+  }
+  .ourStoryContainer h3 {
+    text-align: start;
+  }
+  .ourStoryContainer h5 {
+    display: none;
+  }
+  .ourStoryContainer h2 {
+    display: block;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #000000;
+    margin-top: 10px;
+  }
+  .ourStoryContainer ul li {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .ourStoryContainer h3 {
+    font-size: 28px;
+  }
+  .ourStoryContainer h2 {
+    font-size: 15px;
+  }
+  .ourStoryContainer h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .image {
+    height: 250px;
+  }
+  .ourStoryContainer p {
+    font-size: 15px;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 370px) {
+  .image {
+    height: 200px;
+  }
+}

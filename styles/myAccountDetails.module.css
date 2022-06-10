@@ -1,0 +1,275 @@
+.myAccountDetailsContainer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.myAccountDetailsContainer h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  color: #000000;
+  text-align: center;
+}
+
+.navbarMain {
+  margin-top: 30px;
+}
+
+.navbar-expand {
+  flex-wrap: wrap !important;
+  justify-content: flex-start;
+}
+
+.accountDetails {
+  display: flex;
+}
+
+.navLinks {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin-right: 60px;
+  color: #707070;
+  list-style-type: none;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.border {
+  width: 100% !important;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+
+/************************ Dashboard ***********************/
+
+.dashboardDiv {
+  margin-top: 40px;
+}
+
+.dashboardDiv h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: start;
+  color: #000000;
+}
+
+.dashboardSpan {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #a18a68;
+}
+
+/************************ Orders ***********************/
+
+.orders {
+  display: flex;
+  justify-content: space-between;
+  background: #efefef;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  border-top: 2px solid #a18a68;
+  margin-top: 20px;
+}
+
+.orders h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.orders button {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a18a68;
+  background: none;
+  border: none;
+}
+
+/************************ Downloads ***********************/
+.downloads {
+  display: flex;
+  justify-content: space-between;
+  background: #efefef;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  border-top: 2px solid #a18a68;
+  margin-top: 20px;
+}
+
+.downloads h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.downloads button {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a18a68;
+  background: none;
+  border: none;
+}
+
+/************************ Addresses ***********************/
+.addresses {
+  margin-top: 30px;
+}
+
+.addressesRow {
+  margin-top: 50px;
+}
+
+.addresses h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  text-align: start;
+}
+
+.addresses h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.addresses button {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #a18a68;
+  background: none;
+  border: none;
+  margin-top: 20px;
+  padding-left: 0px;
+}
+
+.addresses p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #707070;
+  margin-top: 15px;
+}
+
+/************************ Account-details ***********************/
+.accountDetails {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.accountDetails h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+  text-align: center;
+  color: #000000;
+}
+
+.accountDetails h6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  color: #707070;
+  margin-bottom: 30px;
+}
+
+.accountDetails h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  font-weight: bold;
+  text-align: start;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.formControl {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+
+.formControl::placeholder {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #707070;
+}
+
+.formControl:active,
+.formControl:focus {
+  box-shadow: none !important;
+}
+
+.submit {
+  margin-top: 45px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  padding: 10px 30px;
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 100%;
+}

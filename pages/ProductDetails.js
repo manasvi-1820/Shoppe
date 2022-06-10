@@ -121,7 +121,11 @@ const ProductDetails = () => {
   };
 
   const Decrement = () => {
-    setCount(count - 1);
+    if (count < 0) {
+      alert("Sorry ! Can't go less than 0");
+    } else {
+      setCount(count - 1);
+    }
   };
 
   // useEffect(() => {

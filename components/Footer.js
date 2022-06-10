@@ -81,36 +81,16 @@ const Footer = () => {
             <div className={styles.line1}></div>
             <div className={styles.linkedInImage}>
               {/* <img src="../Images/linkedin.png" /> */}
-              <Image
-                src={linkedin}
-                width={18}
-                height={18}
-                className={styles.linkedin}
-              ></Image>
+              <Image src={linkedin} className={styles.linkedin}></Image>
             </div>
             <div className={styles.fbImage}>
-              <Image
-                src={fb}
-                width={10}
-                height={18}
-                className={styles.fb}
-              ></Image>
+              <Image src={fb} className={styles.fb}></Image>
             </div>
             <div className={styles.instaImage}>
-              <Image
-                src={insta}
-                width={18}
-                height={18}
-                className={styles.insta}
-              ></Image>
+              <Image src={insta} className={styles.insta}></Image>
             </div>
             <div className={styles.twitterImage}>
-              <Image
-                src={twitter}
-                width={20}
-                height={17}
-                className={styles.twitter}
-              ></Image>
+              <Image src={twitter} className={styles.twitter}></Image>
             </div>
           </div>
         </div>

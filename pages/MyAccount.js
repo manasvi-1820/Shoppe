@@ -7,19 +7,28 @@ import { useRouter } from "next/router";
 
 const MyAccount = () => {
   const route = useRouter();
+  const route1 = useRouter();
   const [color, setColor] = useState(true);
   const [newColor, setNewColor] = useState(false);
+
   const ClickMe = () => {
     setColor(true);
     setNewColor(false);
   };
+
   const NextButton = () => {
     setColor(false);
     setNewColor(true);
   };
+
   const ResetPassword = () => {
     route.push("/ResetPassword");
   };
+
+  const MyAccountDetails = () => {
+    route.push("/MyAccountDetails");
+  };
+
   return (
     <>
       <Header border={true} />
@@ -85,20 +94,21 @@ const MyAccount = () => {
             >
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
-
-            <div className={styles.sendButtonDiv}>
-              <Button
-                variant="dark"
-                type="submit"
-                className={styles.sendButton}
-              >
-                SIGN IN
-              </Button>
-            </div>
-            <p onClick={() => ResetPassword()}>
-              Have you forgotten your password?
-            </p>
           </Form>
+
+          <div className={styles.sendButtonDiv}>
+            <Button
+              onClick={() => MyAccountDetails()}
+              variant="dark"
+              type="submit"
+              className={styles.sendButton}
+            >
+              SIGN IN
+            </Button>
+          </div>
+          <p onClick={() => ResetPassword()}>
+            Have you forgotten your password?
+          </p>
         </div>
       </Container>
 

@@ -4,8 +4,10 @@ import Footer from "../components/Footer";
 import { Container, Row, Col, FormControl } from "react-bootstrap";
 import styles from "../styles/blogPage.module.css";
 import blog from "../json/blogPage.json";
+import Router, { useRouter } from "next/router";
 
 const Blog = () => {
+  const route = useRouter();
   const [firstPage, setFirstPage] = useState(true);
   const [secondPage, setSecondPage] = useState(false);
 
@@ -24,6 +26,10 @@ const Blog = () => {
     setSecondPage(true);
     setIsActiveSecond(true);
     // localStorage.setItem("secondPage", secondPage);
+  };
+
+  const BlogDetails = () => {
+    route.push("/BlogDetails");
   };
 
   useEffect(() => {
@@ -108,14 +114,23 @@ const Blog = () => {
                       {firstPage && (
                         <Col xl={6} lg={6} md={12} className={styles.blogCol}>
                           <div className={styles.imageDiv}>
-                            <img src={item.image} className={styles.image} />
+                            <img
+                              src={item.image}
+                              className={styles.image}
+                              onClick={() => BlogDetails()}
+                            />
                           </div>
                           <h4 className={styles.date}>{item.date}</h4>
                           <h4 className={styles.title}>{item.title}</h4>
                           <h4 className={styles.description}>
                             {item.description}
                           </h4>
-                          <h4 className={styles.button}>{item.button}</h4>
+                          <h4
+                            className={styles.button}
+                            onClick={() => BlogDetails()}
+                          >
+                            {item.button}
+                          </h4>
                         </Col>
                       )}
                     </>
@@ -126,14 +141,23 @@ const Blog = () => {
                       {secondPage && (
                         <Col xl={6} lg={6} md={12} className={styles.blogCol}>
                           <div className={styles.imageDiv}>
-                            <img src={item.image} className={styles.image} />
+                            <img
+                              src={item.image}
+                              className={styles.image}
+                              onClick={() => BlogDetails()}
+                            />
                           </div>
                           <h4 className={styles.date}>{item.date}</h4>
                           <h4 className={styles.title}>{item.title}</h4>
                           <h4 className={styles.description}>
                             {item.description}
                           </h4>
-                          <h4 className={styles.button}>{item.button}</h4>
+                          <h4
+                            className={styles.button}
+                            onClick={() => BlogDetails()}
+                          >
+                            {item.button}
+                          </h4>
                         </Col>
                       )}
                     </>

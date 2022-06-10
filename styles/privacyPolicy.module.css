@@ -1,9 +1,6 @@
 .privacyContainer {
   padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.privacyDiv {
+  padding-bottom: 140px;
 }
 
 .privacyContainer h3 {
@@ -16,6 +13,10 @@
   text-align: center;
 }
 
+.unOrderList {
+  margin-left: 25px;
+}
+
 .duisRutrum {
   max-width: 670px;
   font-family: "DM Sans";
@@ -24,11 +25,27 @@
   font-size: 16px;
   line-height: 27px;
   margin: auto;
-  margin-top: 20px !important;
+  margin-top: 25px !important;
+  color: #000000;
+}
+.list {
+  max-width: 670px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  margin: auto;
+  margin-top: 25px !important;
   color: #000000;
 }
 
+.unOrderList .list::marker {
+  font-size: 22px !important;
+}
+
 .security {
+  max-width: 410px;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
@@ -36,17 +53,146 @@
   line-height: 25px;
   text-transform: capitalize;
   color: #000000;
-  text-align: center;
-  margin-top: 20px !important;
+  text-align: end;
+  margin-top: 30px !important;
 }
 
 .cookies {
+  max-width: 410px;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
   line-height: 25px;
   color: #000000;
-  text-align: center;
-  margin-top: 20px !important;
+  text-align: end;
+  margin-top: 30px !important;
+}
+
+@media (max-width: 1399px) {
+  .security {
+    max-width: 320px;
+  }
+
+  .cookies {
+    max-width: 320px;
+  }
+}
+@media (max-width: 1199px) {
+  .security {
+    max-width: 230px;
+  }
+
+  .cookies {
+    max-width: 230px;
+  }
+}
+@media (max-width: 992px) {
+  .privacyContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .security {
+    max-width: 125px;
+  }
+
+  .cookies {
+    max-width: 125px;
+  }
+}
+@media (max-width: 767px) {
+  .privacyContainer h3 {
+    font-size: 33px;
+    line-height: 43px;
+    text-align: start;
+  }
+
+  .unOrderList {
+    margin-left: 0px !important;
+  }
+
+  .duisRutrum {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 25px !important;
+  }
+  .list {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 25px !important;
+  }
+
+  .unOrderList .list::marker {
+    font-size: 22px !important;
+  }
+
+  .security {
+    max-width: 100%;
+    font-size: 26px;
+    line-height: 25px;
+    text-align: start;
+    margin-top: 30px !important;
+  }
+
+  .cookies {
+    max-width: 100%;
+    font-size: 26px;
+    line-height: 25px;
+    text-align: start;
+    margin-top: 30px !important;
+  }
+}
+@media (max-width: 576px) {
+  .privacyContainer {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .privacyContainer h3 {
+    font-size: 25px;
+    line-height: 43px;
+    text-align: start;
+  }
+  .duisRutrum {
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 25px !important;
+  }
+  .list {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 25px !important;
+  }
+  .unOrderList .list::marker {
+    font-size: 22px !important;
+  }
+  .security {
+    font-size: 22px;
+  }
+  .cookies {
+    font-size: 22px;
+  }
+}
+@media (max-width: 420px) {
+  .privacyContainer h3 {
+    font-size: 23px;
+  }
+  .duisRutrum {
+    font-size: 15px;
+  }
+  .list {
+    font-size: 15px;
+  }
+  .unOrderList .list::marker {
+    font-size: 18px !important;
+  }
+  .security {
+    font-size: 20px;
+  }
+  .cookies {
+    font-size: 20px;
+  }
 }

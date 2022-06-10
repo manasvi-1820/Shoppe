@@ -7,7 +7,7 @@ import styles from "../styles/privacyPolicy.module.css";
 const PrivacyPolicy = () => {
   return (
     <>
-      <Header />
+      <Header border={true} />
 
       <Container className={styles.privacyContainer}>
         <div className={styles.privacyDiv}>
@@ -26,14 +26,16 @@ const PrivacyPolicy = () => {
             eget pellentesque risus scelerisque.
           </p>
           <h5 className={styles.cookies}>Cookies</h5>
-          <p className={styles.duisRutrum}>
-            ● Duis rutrum dictum libero quis rutrum. Etiam sed neque aliquam,
-            sollicitudin.
-          </p>
-          <p className={styles.duisRutrum}>
-            ● Nam fringilla molestie velit, eget pellentesque risus scelerisque
-            a
-          </p>
+          <ul className={styles.unOrderList}>
+            <li className={styles.list}>
+              Duis rutrum dictum libero quis rutrum. Etiam sed neque aliquam,
+              sollicitudin.
+            </li>
+            <li className={styles.list}>
+              Nam fringilla molestie velit, eget pellentesque risus scelerisque
+              a
+            </li>
+          </ul>
         </div>
       </Container>
       <Footer />

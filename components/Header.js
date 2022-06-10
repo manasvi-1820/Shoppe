@@ -107,22 +107,26 @@ const Header = (props) => {
             {props.border ? <div className={styles.border}></div> : ""}
           </Navbar>
 
-          <div className={styles.searchImageDiv}>
-            <div className={styles.searchImageDiv1}>
-              <img
-                src="./Images/search1.png"
-                width={16}
-                height={16}
-                className={styles.searchImage1}
+          {props.search ? (
+            ""
+          ) : (
+            <div className={styles.searchImageDiv}>
+              <div className={styles.searchImageDiv1}>
+                <img
+                  src="./Images/search1.png"
+                  width={16}
+                  height={16}
+                  className={styles.searchImage1}
+                />
+              </div>
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className={styles.searchControl}
+                aria-label="Search"
               />
             </div>
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className={styles.searchControl}
-              aria-label="Search"
-            />
-          </div>
+          )}
         </Row>
       </Container>
     </>
