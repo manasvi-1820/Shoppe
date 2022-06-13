@@ -33,7 +33,12 @@
   border: none;
   padding-left: 0px;
   border-radius: 0px;
+  cursor: pointer;
   /* border-bottom: 1px solid #000000; */
+}
+
+.arrow {
+  cursor: pointer;
 }
 
 .formControl:focus {
@@ -95,6 +100,7 @@
   font-size: 16px;
   line-height: 27px;
   color: #707070;
+  cursor: pointer;
 }
 
 .span:hover {
@@ -106,53 +112,73 @@
   display: flex;
 }
 
-.linkedin {
-  width: 18px;
-  height: 18px;
-}
-.fb {
-  width: 10px;
-  height: 18px;
-}
-.insta {
-  width: 18px;
-  height: 18px;
-}
-.twitter {
-  width: 20px;
-  height: 17px;
-}
-
 .linkedInImage {
-  margin-left: 25px;
+  margin-left: 12px;
+  margin-left: 8px;
+  width: 25px;
+  height: 25px;
 }
 
 .linkedInImage:hover {
-  background-image: url("../public/Images/linkedin1.png");
+  background-image: url("../public/Images/linkedin1.svg");
+}
+
+.linkedInImage:hover .linkedin {
+  display: none;
 }
 
 .fbImage {
-  margin-left: 25px;
+  margin-left: 12px;
+  width: 25px;
+  height: 25px;
 }
 
 .fbImage:hover {
-  background-image: url("../public/Images/fb1.png");
+  background-image: url("../public/Images/facebook.svg");
+}
+
+.fbImage:hover .fb {
+  display: none;
 }
 
 .instaImage {
-  margin-left: 25px;
+  margin-left: 8px;
+  width: 25px;
+  height: 25px;
 }
 
 .instaImage:hover {
-  background-image: url("../public/Images/insta1.png");
+  background-image: url("../public/Images/instagram.svg");
+  /* background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 20%;
+  transform: scale(1.5);
+  color: #fd5949; */
+}
+
+.instaImage:hover .insta {
+  display: none;
 }
 
 .twitterImage {
-  margin-left: 25px;
+  margin-left: 12px;
+  width: 25px;
+  height: 25px;
 }
 
 .twitterImage:hover {
-  background-image: url("../public/Images/Twitter1.png");
+  background-image: url("../public/Images/twitter1.svg");
+}
+.twitterImage:hover .twitter {
+  display: none;
 }
 
 .checkbox {

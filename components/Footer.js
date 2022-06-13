@@ -10,8 +10,6 @@ import {
 } from "react-bootstrap";
 import styles from "../styles/footer.module.css";
 import Image from "next/image";
-import linkedin from "../public/Images/linkedin.png";
-import fb from "../public/Images/fb.png";
 import insta from "../public/Images/insta.png";
 import twitter from "../public/Images/twitter.png";
 import arrow from "../public/Images/arrow.png";
@@ -47,7 +45,7 @@ const Footer = () => {
               aria-describedby="basic-addon2"
             />
             <InputGroup.Text id="basic-addon2" className={styles.inputGroup}>
-              <Image src={arrow}></Image>
+              <Image src={arrow} className={styles.arrow}></Image>
             </InputGroup.Text>
           </InputGroup>
         </Col>
@@ -79,19 +77,30 @@ const Footer = () => {
             <h6 className={styles.followUs}>Follow us</h6>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div className={styles.line1}></div>
-            <div className={styles.linkedInImage}>
-              {/* <img src="../Images/linkedin.png" /> */}
-              <Image src={linkedin} className={styles.linkedin}></Image>
-            </div>
-            <div className={styles.fbImage}>
-              <Image src={fb} className={styles.fb}></Image>
-            </div>
-            <div className={styles.instaImage}>
-              <Image src={insta} className={styles.insta}></Image>
-            </div>
-            <div className={styles.twitterImage}>
-              <Image src={twitter} className={styles.twitter}></Image>
-            </div>
+            <a href="https://www.linkedin.com">
+              <div className={styles.linkedInImage}>
+                <img
+                  src="./Images/linked.svg"
+                  className={styles.linkedin}
+                  href="www.linkedin.com"
+                />
+              </div>
+            </a>
+            <a href="https://www.facebook.com">
+              <div className={styles.fbImage}>
+                <img src="./Images/fb1.svg" className={styles.fb} />
+              </div>
+            </a>
+            <a href="https://www.instagram.com">
+              <div className={styles.instaImage}>
+                <img src="./Images/insta.svg" className={styles.insta} />
+              </div>
+            </a>
+            <a href="https://www.twitter.com">
+              <div className={styles.twitterImage}>
+                <img src="./Images/twitter.svg" className={styles.twitter} />
+              </div>
+            </a>
           </div>
         </div>
       </Row>

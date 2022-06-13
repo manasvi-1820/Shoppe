@@ -47,6 +47,18 @@
   position: relative;
 }
 
+.cart {
+  cursor: pointer;
+}
+
+.view {
+  cursor: pointer;
+}
+
+.wishlist {
+  cursor: pointer;
+}
+
 .productsCol h5 {
   font-family: "DM Sans";
   font-style: normal;

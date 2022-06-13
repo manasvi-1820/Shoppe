@@ -8,18 +8,31 @@ import products from "../json/products.json";
 import cart from "../public/Images/cart.png";
 import eye from "../public/Images/eye.png";
 import wishlist from "../public/Images/wishlist.png";
-import { useParams } from "react-router";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Shop = () => {
   const route = useRouter();
   // const { id } = useParams();
 
-  const Click = (id) => {
-    // route.push(`/shop/${id}`);
-    route.push("/ProductDetails");
-    console.log("id", id);
-  };
+  // const Cart = (id) => {
+  //   switch (id) {
+  //     case "cart-1":
+  //       return route.push("/Cart");
+  //     case "cart-2":
+  //       return route.push("/ProductDetails");
+  //     case "cart-3":
+  //       return route.push("/Wishlist");
+  //     default:
+  //       return;
+  //   }
+  // };
+
+  // const Click = (id) => {
+  //   route.push(`/shop/${id}`);
+  //   route.push("/ProductDetails");
+  //   console.log("id", id);
+  // };
 
   return (
     <>
@@ -108,13 +121,9 @@ const Shop = () => {
           </Col>
 
           <Col xl={9} className={styles.productsCol}>
-            {/* <Products titleHide={false} /> */}
             <Container className={styles.productsContainer}>
               <Row className={styles.productsRow}>
-                {products.map((item, id) => {
-                  {
-                    /* console.log("id", id); */
-                  }
+                {products.map((item) => {
                   return (
                     <>
                       <Col
@@ -125,29 +134,47 @@ const Shop = () => {
                         xs={6}
                         className={styles.productsCol}
                       >
-                        <div className={styles.imageDiv} key={item.id}>
-                          <img
-                            src={item.image}
-                            className={styles.productsImage}
-                            onClick={() => Click(item.id)}
-                          />
+                        <div className={styles.imageDiv}>
+                          <Link href={`/product-details/${item.id}`}>
+                            <img
+                              src={item.image}
+                              className={styles.productsImage}
+                            />
+                          </Link>
 
-                          <div
-                            className={styles.hoverDiv}
-                            onClick={() => Click(item.id)}
-                          >
+                          <div className={styles.hoverDiv}>
                             <div className={styles.hoverImage}>
-                              <Image src={cart} width={25} height={25}></Image>
+                              <Link href={"/Cart"}>
+                                <Image
+                                  id="cart-1"
+                                  src={cart}
+                                  width={25}
+                                  height={25}
+                                  className={styles.cartImage}
+                                ></Image>
+                              </Link>
                             </div>
                             <div className={styles.hoverImage}>
-                              <Image src={eye} width={32} height={32}></Image>
+                              <Link href={`/product-details/${item.id}`}>
+                                <Image
+                                  id="cart-2"
+                                  src={eye}
+                                  width={32}
+                                  height={32}
+                                  className={styles.productDetailsImage}
+                                ></Image>
+                              </Link>
                             </div>
                             <div className={styles.hoverImage}>
-                              <Image
-                                src={wishlist}
-                                width={25}
-                                height={25}
-                              ></Image>
+                              <Link href={"/Wishlist"}>
+                                <Image
+                                  id="cart-3"
+                                  src={wishlist}
+                                  width={25}
+                                  height={25}
+                                  className={styles.wishlistImage}
+                                ></Image>
+                              </Link>
                             </div>
                           </div>
                         </div>

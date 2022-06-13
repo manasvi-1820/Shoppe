@@ -252,6 +252,15 @@
   /* text-align: center; */
   position: relative;
 }
+.cartImage {
+  cursor: pointer;
+}
+.wishlistImage {
+  cursor: pointer;
+}
+.productDetailsImage {
+  cursor: pointer;
+}
 
 .productsCol h5 {
   font-family: "DM Sans";

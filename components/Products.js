@@ -6,37 +6,48 @@ import cart from "../public/Images/cart.png";
 import eye from "../public/Images/eye.png";
 import wishlist from "../public/Images/wishlist.png";
 import { useRouter } from "next/router";
-import { useParams } from "react-router";
+import Link from "next/link";
 
 const Products = ({ item }) => {
-  const { id } = useParams();
   const route = useRouter();
-
-  const Click = () => {
-    // route.push(`/Shop/${id}`);
-    // route.push(`/Shop/${id}`);
-  };
 
   return (
     <Container className={styles.productsContainer}>
       <Row className={styles.productsRow}>
         <div>
           <div className={styles.imageDiv} key={item.id}>
-            <img
-              src={item.image}
-              className={styles.productsImage}
-              onClick={() => Click()}
-            />
+            <img src={item.image} className={styles.productsImage} />
 
-            <div className={styles.hoverDiv} onClick={() => Click()}>
+            <div className={styles.hoverDiv}>
               <div className={styles.hoverImage}>
-                <Image src={cart} width={25} height={25}></Image>
+                <Link href={"/Cart"}>
+                  <Image
+                    src={cart}
+                    width={25}
+                    height={25}
+                    className={styles.cart}
+                  ></Image>
+                </Link>
               </div>
               <div className={styles.hoverImage}>
-                <Image src={eye} width={32} height={32}></Image>
+                <Link href={`/product-details/${item.id}`}>
+                  <Image
+                    src={eye}
+                    width={32}
+                    height={32}
+                    className={styles.view}
+                  ></Image>
+                </Link>
               </div>
               <div className={styles.hoverImage}>
-                <Image src={wishlist} width={25} height={25}></Image>
+                <Link href={"/Wishlist"}>
+                  <Image
+                    src={wishlist}
+                    width={25}
+                    height={25}
+                    className={styles.wishlist}
+                  ></Image>
+                </Link>
               </div>
             </div>
           </div>

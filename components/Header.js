@@ -15,19 +15,20 @@ import styles from "../styles/header.module.css";
 import search from "../public/Images/search.png";
 import cart from "../public/Images/cart.png";
 import profile from "../public/Images/profile.png";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 // import search1 from "../public/Images/search1.png";
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState("");
+  const [isActiveSearch, setIsActiveSearch] = useState("");
   const route = useRouter();
 
   useEffect(() => {
     setIsActive(window.location.pathname);
   }, []);
 
-  const MyAccount = () => {
-    route.push("/MyAccount");
+  const Search = () => {
+    setIsActiveSearch(!isActiveSearch);
   };
 
   return (
@@ -88,19 +89,42 @@ const Header = (props) => {
 
                 <div className={styles.imageDiv}>
                   <div className={styles.searchImage}>
-                    <Image src={search} width={20} height={20}></Image>
-                  </div>
-                  <div className={styles.cartImage}>
-                    <Image src={cart} width={20} height={20}></Image>
-                  </div>
-                  <div className={styles.userImage}>
                     <Image
-                      src={profile}
+                      src={search}
                       width={20}
                       height={20}
-                      onClick={() => MyAccount()}
+                      className={styles.searchImg}
+                      onClick={() => {
+                        Search();
+                      }}
                     ></Image>
+                    {isActiveSearch && (
+                      <>
+                        <div className={styles.searchImgDiv}></div>
+                        <FormControl
+                          type="search"
+                          placeholder="Search.."
+                          className={styles.searchControl1}
+                          aria-label="Search"
+                        />
+                      </>
+                    )}
                   </div>
+
+                  <NavLink
+                    href="/Cart"
+                    className={styles.cartImage}
+                    active={isActive === "/Cart"}
+                  >
+                    <Image src={cart} width={20} height={20}></Image>
+                  </NavLink>
+                  <NavLink
+                    href="/MyAccount"
+                    className={styles.userImage}
+                    active={isActive === "/MyAccount"}
+                  >
+                    <Image src={profile} width={20} height={20}></Image>
+                  </NavLink>
                 </div>
               </Nav>
             </Navbar.Collapse>

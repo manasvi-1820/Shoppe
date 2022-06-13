@@ -186,9 +186,9 @@
   transition: background 0s !important;
 }
 
-.addToCart:hover {
+/* .addToCart:hover {
   background: lightblue;
-}
+} */
 
 .viewMore {
   display: none;

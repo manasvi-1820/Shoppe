@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import {
   Nav,
   Container,
@@ -15,18 +14,20 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "../styles/productDetails.module.css";
-import styles1 from "../styles/products.module.css";
-import products from "../json/products.json";
-import Products from "../components/Products";
-import Rate from "../components/Rate";
+import styles from "../../styles/productDetails.module.css";
+import styles1 from "../../styles/products.module.css";
+import products from "../../json/products.json";
+import Products from "../../components/Products";
+import Rate from "../../components/Rate";
 import Image from "next/image";
-import email from "../public/Images/email.png";
-import fb from "../public/Images/fb.png";
-import insta from "../public/Images/insta.png";
-import twitter from "../public/Images/twitter.png";
+import email from "../../public/Images/email.png";
+import fb from "../../public/Images/fb.png";
+import insta from "../../public/Images/insta.png";
+import twitter from "../../public/Images/twitter.png";
+import Router from "next/router";
+import { useRouter } from "next/router";
 
-const ProductDetails = (props) => {
+const ProductDetails = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -36,30 +37,8 @@ const ProductDetails = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 576,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 420,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 2,
-    //     },
-    //   },
-    // ],
   };
+
   const settings1 = {
     dots: false,
     infinite: true,
@@ -70,7 +49,7 @@ const ProductDetails = (props) => {
     slidesToScroll: 1,
     arrows: false,
   };
-  // const { id } = useParams();
+
   // const [product, setProduct] = useState([]);
   const [count, setCount] = useState(0);
   const [isActive, setIsActive] = useState(true);
@@ -128,16 +107,12 @@ const ProductDetails = (props) => {
     }
   };
 
-  // useEffect(() => {
-  //   // const getProduct = async () => {
-  //   //   const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-  //   //   setProduct(await response.json());
-  //   // };
-
-  //   // getProduct();
-
-  //   setProduct();
-  // }, []);
+  const router = useRouter();
+  console.log("Router", router.query.id);
+  var abc = products.filter((m, n) => {
+    return router.query.id == m.id;
+  });
+  console.log("Router", abc);
 
   return (
     <>
@@ -147,52 +122,38 @@ const ProductDetails = (props) => {
         <div className={styles.productDetailsCart}>
           <Row>
             <Col xl={2} className={styles.sideImageCol}>
-              {products.map((item, index) => {
-                if (index < 1)
-                  return (
-                    <>
-                      <img src={item.image} className={styles.sideImage1} />
-                      <img src={item.image} className={styles.sideImage2} />
-                      <img src={item.image} className={styles.sideImage3} />
-                      <img src={item.image} className={styles.sideImage4} />
-                    </>
-                  );
-              })}
+              <>
+                {abc.length > 0 && (
+                  <>
+                    <img src={abc[0].image} className={styles.sideImage1} />
+                    <img src={abc[0].image} className={styles.sideImage2} />
+                    <img src={abc[0].image} className={styles.sideImage3} />
+                    <img src={abc[0].image} className={styles.sideImage4} />
+                  </>
+                )}
+              </>
             </Col>
 
             <Col xl={5} lg={6} md={12} className={styles.centerImageCol}>
               <Row>
-                <Slider {...settings}>
-                  {products.map((item, index) => {
-                    if (index < 3)
-                      return (
-                        <>
-                          <img
-                            src={item.image}
-                            className={styles.centerImage}
-                          />
-                        </>
-                      );
-                  })}
-                </Slider>
+                {abc.length > 0 && (
+                  <Slider {...settings}>
+                    <img src={abc[0].image} className={styles.centerImage} />
+                    <img src={abc[0].image} className={styles.centerImage} />
+                    <img src={abc[0].image} className={styles.centerImage} />
+                  </Slider>
+                )}
               </Row>
             </Col>
 
             <Col xl={5} lg={6} md={12} className={styles.cartCol}>
-              {products.map((item, index) => {
-                if (index < 1)
-                  return (
-                    <>
-                      <h5>{item.name}</h5>
-                      <div className={styles.priceShareDiv}>
-                        <h4>{item.price}</h4>
-                        <button className={styles.shareButton}>
-                          <img src="./Images/share-fill.svg" />
-                        </button>
-                      </div>
-                    </>
-                  );
-              })}
+              <h5>{abc.length > 0 ? abc[0].name : "abcd"}</h5>
+              <div className={styles.priceShareDiv}>
+                <h4>{abc.length > 0 ? abc[0].price : "abc"}</h4>
+                <button className={styles.shareButton}>
+                  <img src="./Images/share-fill.svg" />
+                </button>
+              </div>
 
               <div className={styles.ratingDiv}>
                 <Rate />
