@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TopButton from "../components/TopButton";
 import Products from "../components/Products";
 import GoldBigHoops from "../components/GoldBigHoops";
 import products from "../json/products.json";
@@ -17,6 +18,7 @@ export default function Home(props) {
 
   return (
     <>
+      <TopButton />
       <Header />
       <GoldBigHoops />
       <Container className={styles.productsContainer}>

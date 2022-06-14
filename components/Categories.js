@@ -32,6 +32,13 @@ const Categories = () => {
         },
       },
       {
+        breakpoint: 500,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 2,
+        },
+      },
+      {
         breakpoint: 420,
         settings: {
           slidesToScroll: 1,

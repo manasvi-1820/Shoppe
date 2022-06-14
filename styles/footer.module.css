@@ -244,9 +244,7 @@
     line-height: 27px;
     color: #707070;
   }
-  .linkedInImage {
-    display: none;
-  }
+
   .followUs {
     display: block;
     font-family: "DM Sans";
@@ -255,12 +253,16 @@
     font-size: 14px;
     line-height: 20px;
     color: #000000;
+    padding-top: 8px;
+  }
+  .linkedInImage {
+    margin-left: 15px !important;
   }
   .line1 {
     display: block;
     border-bottom: 1px solid #000000;
     transform: rotate(180deg);
-    width: 80px;
+    width: 60px;
   }
   .copyrightDiv {
     display: flex;
@@ -324,9 +326,7 @@
     order: 2;
     margin-top: 30px;
   }
-  .linkedInImage {
-    display: none;
-  }
+
   .followUs {
     display: block;
     font-family: "DM Sans";
@@ -416,9 +416,8 @@
     font-size: 12px;
   }
   .followUs {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
-    margin-top: 5px;
   }
   .label {
     font-size: 12px;
@@ -430,16 +429,16 @@
 
   .fbImage {
     margin-left: 12px;
-    max-width: 8px !important;
+    max-width: 20px !important;
   }
 
   .instaImage {
     margin-left: 12px;
-    max-width: 14px !important;
+    max-width: 20px !important;
   }
 
   .twitterImage {
-    margin-left: 12px;
-    max-width: 16px !important;
+    margin-left: 18px;
+    max-width: 20px !important;
   }
 }

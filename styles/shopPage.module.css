@@ -6,13 +6,13 @@
 }
 
 .shopTheLatest {
-  margin-bottom: 20px;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 33px;
   line-height: 43px;
   color: #000000;
+  margin-top: 25px;
 }
 
 .shop {
@@ -24,7 +24,7 @@
 }
 
 .searchImageDiv {
-  margin-top: 10px;
+  margin-top: 38px;
   margin-bottom: 10px;
   display: flex;
   position: relative;
@@ -33,7 +33,7 @@
 .searchImageDiv1 {
   position: absolute;
   left: 0% !;
-  top: 15%;
+  top: 4%;
   right: 0%;
   /* padding-right: 10px; */
 }
@@ -44,7 +44,8 @@
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 10px;
-  border-bottom: 0.75px solid #707070;
+  border-bottom: 1px solid #d8d8d8;
+  width: 100%;
 }
 
 .searchControl::placeholder {
@@ -55,7 +56,9 @@
   line-height: 22px;
   color: #707070;
 }
-
+.searchControl:focus-visible {
+  outline: none;
+}
 .searchControl:focus,
 .searchControl:active {
   box-shadow: none !important;
@@ -64,6 +67,7 @@
 .shopByDropDown {
   margin-top: 30px;
   margin-bottom: 10px;
+  outline: none;
 }
 
 .shopBy:focus,
@@ -78,8 +82,6 @@
   font-size: 14px;
   line-height: 22px;
   color: #000000;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .sortByDropDown {
@@ -94,8 +96,6 @@
   font-size: 14px;
   line-height: 22px;
   color: #000000;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .sortBy:focus,
@@ -104,7 +104,7 @@
 }
 
 .range {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .rangeDiv {
   display: flex;
@@ -154,14 +154,25 @@
   color: #000000;
 }
 
+@media (max-width: 1199px) {
+  .shopTheLatest {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 43px;
+    color: #000000;
+    margin-top: 10px !important;
+    margin-bottom: 60px !important;
+  }
+}
+
 @media (max-width: 992px) {
   .shopContainer {
     padding-top: 20px;
     padding-bottom: 200px;
   }
-  .sidebar {
-    display: none;
-  }
+
   .shop {
     display: block;
     margin-bottom: 20px;
@@ -175,9 +186,6 @@
   .shopTheLatest {
     display: none;
   }
-}
-
-@media (max-width: 767px) {
   .filtersDiv {
     display: block;
     display: flex;
@@ -193,12 +201,15 @@
     color: #a18a68;
     padding-left: 15px;
   }
+  .range {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
   .shopContainer {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 20px;
     padding-bottom: 40px;
   }

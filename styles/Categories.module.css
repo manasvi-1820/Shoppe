@@ -6,8 +6,9 @@
 }
 
 .sliderDiv {
-  display: grid !important;
-  justify-content: center;
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .button {
@@ -20,6 +21,7 @@
   border: 1px solid #d8d8d8;
   border-radius: 4px;
   padding: 10px 60px;
+  width: 98%;
   background: none;
   /* margin-left: 5px; */
 }
