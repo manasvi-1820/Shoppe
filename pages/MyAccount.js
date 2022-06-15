@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { Container, Form, Button, Col, Row } from "react-bootstrap";
 import styles from "../styles/myAccount.module.css";
 import { useRouter } from "next/router";
+import TopButton from "../components/TopButton";
 
 const MyAccount = () => {
   const route = useRouter();
@@ -31,6 +32,7 @@ const MyAccount = () => {
 
   return (
     <>
+      <TopButton />
       <Header border={true} />
 
       <Container className={styles.myAccountContainer}>

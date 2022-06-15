@@ -62,9 +62,9 @@
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   /* transform: translateX(100%); */
   /* background-color: lightsteelblue !important; */
-
   background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #ffffff 64%);
+  background-image: linear-gradient(315deg, #a18a68 0%, #ffffff 70%);
+  /* color: #a18a68; */
 }
 .offcanvas-header {
   display: flex;
@@ -72,6 +72,7 @@
   justify-content: end !important;
   padding: 1rem 1rem;
 }
+
 @media (max-width: 420px) {
   .offcanvas-end {
     width: 300px !important;

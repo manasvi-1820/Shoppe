@@ -84,25 +84,24 @@ const Shop = () => {
               <h3 className={styles.filters}>Filters</h3>
             </div>
 
-            <div className={styles.desktop}>
+            <div className={styles.sidebar}>
+              <div className={styles.searchImageDiv}>
+                <div className={styles.searchImageDiv1}>
+                  <img
+                    src="./Images/search1.png"
+                    width={16}
+                    height={16}
+                    className={styles.searchImage1}
+                  />
+                </div>
+                <input
+                  placeholder="Search.."
+                  className={styles.searchControl}
+                  aria-label="Search"
+                />
+              </div>
               {filter && (
-                <div className={styles.sidebar}>
-                  <div className={styles.searchImageDiv}>
-                    <div className={styles.searchImageDiv1}>
-                      <img
-                        src="./Images/search1.png"
-                        width={16}
-                        height={16}
-                        className={styles.searchImage1}
-                      />
-                    </div>
-                    <input
-                      placeholder="Search.."
-                      className={styles.searchControl}
-                      aria-label="Search"
-                    />
-                  </div>
-
+                <>
                   <Box sx={{ minWidth: 150 }} className={styles.shopByDropDown}>
                     <FormControl fullWidth>
                       <InputLabel
@@ -196,156 +195,8 @@ const Shop = () => {
                       className={styles.inStockLabel}
                     />
                   </Form>
-                </div>
+                </>
               )}
-            </div>
-
-            <div className={styles.mobile}>
-              <Navbar expand={false} className={styles.nav}>
-                <Navbar.Toggle
-                  aria-controls="offcanvasNavbar"
-                  style={{ paddingRight: "0px" }}
-                />
-
-                <Navbar.Offcanvas
-                  id="offcanvasNavbar"
-                  aria-labelledby="offcanvasNavbarLabel"
-                  placement="start"
-                >
-                  <Offcanvas.Header closeButton></Offcanvas.Header>
-                  <Offcanvas.Body>
-                    <Nav
-                      className={styles.nav}
-                      style={{
-                        alignItems: "start",
-                      }}
-                      navbarScroll
-                    >
-                      {filter && (
-                        <div className={styles.sidebar}>
-                          <div className={styles.searchImageDiv}>
-                            <div className={styles.searchImageDiv1}>
-                              <img
-                                src="./Images/search1.png"
-                                width={16}
-                                height={16}
-                                className={styles.searchImage1}
-                              />
-                            </div>
-                            <input
-                              placeholder="Search.."
-                              className={styles.searchControl}
-                              aria-label="Search"
-                            />
-                          </div>
-
-                          <Box
-                            sx={{ minWidth: 150 }}
-                            className={styles.shopByDropDown}
-                          >
-                            <FormControl fullWidth>
-                              <InputLabel
-                                id="demo-simple-select-label"
-                                className={styles.shopBy}
-                              >
-                                Shop By
-                              </InputLabel>
-                              <Select
-                                className={styles.shopBy}
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={shopBy}
-                                label="Age"
-                                onChange={handleChange1}
-                              >
-                                <MenuItem value={10} className={styles.shopBy}>
-                                  Ten
-                                </MenuItem>
-                                <MenuItem value={20} className={styles.shopBy}>
-                                  Twenty
-                                </MenuItem>
-                                <MenuItem value={30} className={styles.shopBy}>
-                                  Thirty
-                                </MenuItem>
-                              </Select>
-                            </FormControl>
-                          </Box>
-
-                          <Box
-                            sx={{ minWidth: 120 }}
-                            className={styles.sortByDropDown}
-                          >
-                            <FormControl fullWidth>
-                              <InputLabel
-                                id="demo-simple-select-label"
-                                className={styles.sortBy}
-                              >
-                                Sort By
-                              </InputLabel>
-                              <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={sortBy}
-                                label="Age"
-                                className={styles.sortBy}
-                                onChange={handleChange2}
-                              >
-                                <MenuItem value={10} className={styles.sortBy}>
-                                  Ten
-                                </MenuItem>
-                                <MenuItem value={20} className={styles.sortBy}>
-                                  Twenty
-                                </MenuItem>
-                                <MenuItem value={30} className={styles.sortBy}>
-                                  Thirty
-                                </MenuItem>
-                              </Select>
-                            </FormControl>
-                          </Box>
-
-                          <Box sx={{ maxWidth: 310 }} className={styles.range}>
-                            <Slider
-                              getAriaLabel={() => "Temperature range"}
-                              value={value}
-                              onChange={handleChange}
-                              valueLabelDisplay="auto"
-                              getAriaValueText={valuetext}
-                            />
-                          </Box>
-
-                          <div className={styles.rangeDiv}>
-                            <Form.Label className={styles.priceRange}>
-                              Price: ${value}
-                              {/* Price: $40 - $180 */}
-                            </Form.Label>
-                            <Form.Label className={styles.filter}>
-                              Filter
-                            </Form.Label>
-                          </div>
-
-                          <Form className={styles.onSaleToogle}>
-                            <Form.Check
-                              label="On Sale"
-                              type="switch"
-                              id="custom-switch"
-                              className={styles.onSaleLabel}
-                            />
-                          </Form>
-
-                          <Form className={styles.inStockToogle}>
-                            <Form.Check
-                              label="In Stock"
-                              type="switch"
-                              id="custom-switch"
-                              className={styles.inStockLabel}
-                            />
-                          </Form>
-                        </div>
-                      )}
-                    </Nav>
-                  </Offcanvas.Body>
-                </Navbar.Offcanvas>
-              </Navbar>
             </div>
           </Col>
 

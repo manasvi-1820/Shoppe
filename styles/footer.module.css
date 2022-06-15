@@ -113,14 +113,14 @@
 }
 
 .linkedInImage {
-  margin-left: 12px;
-  margin-left: 8px;
-  width: 25px;
-  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .linkedInImage:hover {
   background-image: url("../public/Images/linkedin1.svg");
+  width: 25px;
+  height: 25px;
 }
 
 .linkedInImage:hover .linkedin {
@@ -128,13 +128,14 @@
 }
 
 .fbImage {
-  margin-left: 12px;
-  width: 25px;
-  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .fbImage:hover {
   background-image: url("../public/Images/facebook.svg");
+  width: 25px;
+  height: 25px;
 }
 
 .fbImage:hover .fb {
@@ -142,26 +143,14 @@
 }
 
 .instaImage {
-  margin-left: 8px;
-  width: 25px;
-  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .instaImage:hover {
   background-image: url("../public/Images/instagram.svg");
-  /* background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  font-size: 2rem;
-  color: #fff;
-  border-radius: 20%;
-  transform: scale(1.5);
-  color: #fd5949; */
+  width: 25px;
+  height: 25px;
 }
 
 .instaImage:hover .insta {
@@ -169,14 +158,16 @@
 }
 
 .twitterImage {
-  margin-left: 12px;
-  width: 25px;
-  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .twitterImage:hover {
   background-image: url("../public/Images/twitter1.svg");
+  width: 25px;
+  height: 25px;
 }
+
 .twitterImage:hover .twitter {
   display: none;
 }
@@ -200,9 +191,9 @@
   margin-top: 10px;
 }
 
-.label:hover {
+/* .label:hover {
   color: #47a7f5 !important;
-}
+} */
 
 .followUs {
   display: none;

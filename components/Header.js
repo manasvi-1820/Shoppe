@@ -13,13 +13,11 @@ import styles from "../styles/header.module.css";
 import Link from "next/link";
 import cart from "../public/Images/cart.png";
 import profile from "../public/Images/profile.png";
-import { useRouter } from "next/router";
-// import search1 from "../public/Images/search1.png";
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState("");
   const [isActiveSearch, setIsActiveSearch] = useState(false);
-  const route = useRouter();
+  const [isActiveSearchMobile, setIsActiveSearchMobile] = useState(true);
 
   useEffect(() => {
     setIsActive(window.location.pathname);
@@ -27,6 +25,12 @@ const Header = (props) => {
 
   const Search = () => {
     setIsActiveSearch(true);
+    setIsActiveSearchMobile(false);
+  };
+
+  const Close = () => {
+    setIsActiveSearch(false);
+    setIsActiveSearchMobile(true);
   };
 
   return (
@@ -95,15 +99,16 @@ const Header = (props) => {
 
                   <div className={styles.imageDiv}>
                     <div className={styles.searchImage}>
-                      {isActiveSearch && (
+                      {isActiveSearch ? (
                         <>
-                          {/* <div className={styles.searchImgDiv}> */}
                           <FormControl
                             placeholder="Search.."
                             className={styles.searchControl1}
+                            onBlur={() => Close()}
                           />
-                          {/* </div> */}
                         </>
+                      ) : (
+                        ""
                       )}
                       <img
                         src="../Images/search.png"
@@ -176,6 +181,28 @@ const Header = (props) => {
             </Navbar.Brand>
 
             <div className={styles.cartToogleDiv}>
+              <div className={styles.searchToggleDiv}>
+                {isActiveSearch ? (
+                  <>
+                    <FormControl
+                      placeholder="Search.."
+                      className={styles.searchControl1}
+                      onBlur={() => Close()}
+                    />
+                  </>
+                ) : (
+                  ""
+                )}
+                <img
+                  src="../Images/search.png"
+                  width={22}
+                  height={22}
+                  className={styles.searchImg}
+                  onClick={() => {
+                    Search();
+                  }}
+                />
+              </div>
               <div className={styles.cartImageMobile}>
                 <Image src={cart} width={23} height={23}></Image>
               </div>
@@ -225,7 +252,7 @@ const Header = (props) => {
                   </div>
 
                   <div className={styles.imageDiv}>
-                    <div className={styles.searchImage}>
+                    {/* <div className={styles.searchImage}>
                       {isActiveSearch && (
                         <>
                           <FormControl
@@ -243,7 +270,7 @@ const Header = (props) => {
                           Search();
                         }}
                       />
-                    </div>
+                    </div> */}
 
                     <NavLink
                       href="/Cart"
@@ -263,7 +290,7 @@ const Header = (props) => {
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-            {props.search ? (
+            {props.search || isActiveSearchMobile ? (
               ""
             ) : (
               <div className={styles.searchImageDiv}>
@@ -280,6 +307,7 @@ const Header = (props) => {
                   placeholder="Search"
                   className={styles.searchControl}
                   aria-label="Search"
+                  onBlur={() => Close()}
                 />
               </div>
             )}

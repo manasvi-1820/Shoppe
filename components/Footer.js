@@ -10,10 +10,7 @@ import {
 } from "react-bootstrap";
 import styles from "../styles/footer.module.css";
 import Image from "next/image";
-import insta from "../public/Images/insta.png";
-import twitter from "../public/Images/twitter.png";
 import arrow from "../public/Images/arrow.png";
-import PrivacyPolicy from "../pages/PrivacyPolicy";
 import { useRouter } from "next/router";
 
 const Footer = () => {
@@ -53,6 +50,7 @@ const Footer = () => {
         <Form.Group
           className="mb-3"
           id="formCheckbox"
+          controlId="formHorizontalCheck"
           className={styles.checkbox}
         >
           <Form.Check
@@ -79,11 +77,7 @@ const Footer = () => {
             <div className={styles.line1}></div>
             <a href="https://www.linkedin.com">
               <div className={styles.linkedInImage}>
-                <img
-                  src="./Images/linked.svg"
-                  className={styles.linkedin}
-                  href="www.linkedin.com"
-                />
+                <img src="./Images/linked.svg" className={styles.linkedin} />
               </div>
             </a>
             <a href="https://www.facebook.com">

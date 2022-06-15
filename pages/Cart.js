@@ -2,10 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Container, Row, Col } from "react-bootstrap";
+import TopButton from "../components/TopButton";
 
 const Cart = () => {
   return (
     <>
+      <TopButton />
       <Header />
       <Container>
         <Row>

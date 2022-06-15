@@ -3,10 +3,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Container, Form, Button, Col, Row } from "react-bootstrap";
 import styles from "../styles/contact.module.css";
+import TopButton from "../components/TopButton";
 
 const Contact = () => {
   return (
     <>
+      <TopButton />
       <Header border={true} />
 
       <Container className={styles.contactContainer}>

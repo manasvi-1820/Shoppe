@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import TopButton from "../components/TopButton";
 import {
   Container,
   Navbar,
@@ -84,6 +85,7 @@ const MyAccountDetails = () => {
 
   return (
     <>
+      <TopButton />
       <Header />
 
       <Container className={styles.myAccountDetailsContainer}>

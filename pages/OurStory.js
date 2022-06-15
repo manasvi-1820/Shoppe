@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TopButton from "../components/TopButton";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "../styles/ourStory.module.css";
 import blog from "../json/blogPage.json";
@@ -8,6 +9,7 @@ import blog from "../json/blogPage.json";
 const OurStory = () => {
   return (
     <>
+      <TopButton />
       <Header border={true} />
 
       <Container className={styles.ourStoryContainer}>

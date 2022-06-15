@@ -9,6 +9,7 @@ import {
   Form,
   Button,
 } from "react-bootstrap";
+import TopButton from "../components/TopButton";
 import styles from "../styles/blogDetails.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -27,6 +28,7 @@ const BlogDetails = () => {
   };
   return (
     <>
+      <TopButton />
       <Header />
 
       <Container className={styles.blogDetailsContainer}>

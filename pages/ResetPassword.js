@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TopButton from "../components/TopButton";
 import { Container, Form, Button, Col, Row } from "react-bootstrap";
 import styles from "../styles/resetPassword.module.css";
 
 const ResetPassword = () => {
   return (
     <>
+      <TopButton />
       <Header border={true} />
 
       <Container className={styles.resetPasswordContainer}>

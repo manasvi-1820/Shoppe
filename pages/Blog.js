@@ -4,7 +4,8 @@ import Footer from "../components/Footer";
 import { Container, Row, Col, FormControl } from "react-bootstrap";
 import styles from "../styles/blogPage.module.css";
 import blog from "../json/blogPage.json";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
+import TopButton from "../components/TopButton";
 
 const Blog = () => {
   const route = useRouter();
@@ -73,6 +74,7 @@ const Blog = () => {
 
   return (
     <>
+      <TopButton />
       <Header border={true} />
 
       <Container className={styles.blogContainer}>
