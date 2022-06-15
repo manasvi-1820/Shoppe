@@ -36,30 +36,8 @@ const ProductDetails = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 576,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 420,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 2,
-    //     },
-    //   },
-    // ],
   };
+
   const settings1 = {
     dots: false,
     infinite: true,

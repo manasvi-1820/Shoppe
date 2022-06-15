@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import TopButton from "../components/TopButton";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {
   Container,
   Navbar,
@@ -14,6 +17,46 @@ import {
 import styles from "../styles/myAccountDetails.module.css";
 
 const MyAccountDetails = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    autoplay: true,
+    slidesToScroll: 1,
+    arrows: true,
+    // responsive: [
+    //   {
+    //     breakpoint: 767,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 576,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 500,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 420,
+    //     settings: {
+    //       slidesToScroll: 1,
+    //       slidesToShow: 2,
+    //     },
+    //   },
+    // ],
+  };
+
   const [isActive, setIsActive] = useState(true);
 
   const [dashboard, setDashboard] = useState(true);
@@ -86,55 +129,58 @@ const MyAccountDetails = () => {
   return (
     <>
       <TopButton />
-      <Header />
+      <Header border={true} />
 
       <Container className={styles.myAccountDetailsContainer}>
         <h3>My Account</h3>
+
         <div className={styles.navbarMain}>
-          <Navbar>
-            <Nav className={styles.accountDetails}>
-              <Nav.Link
-                className={styles.navLinks}
-                onClick={() => ShowDashboard()}
-                active={isActive}
-              >
-                Dashboard
-              </Nav.Link>
+          <Slider {...settings}>
+            <Navbar>
+              <Nav className={styles.accountDetails}>
+                <Nav.Link
+                  className={styles.navLinks}
+                  onClick={() => ShowDashboard()}
+                  active={isActive}
+                >
+                  Dashboard
+                </Nav.Link>
 
-              <Nav.Link
-                className={styles.navLinks}
-                onClick={() => ShowOrders()}
-              >
-                Orders
-              </Nav.Link>
+                <Nav.Link
+                  className={styles.navLinks}
+                  onClick={() => ShowOrders()}
+                >
+                  Orders
+                </Nav.Link>
 
-              <Nav.Link
-                className={styles.navLinks}
-                onClick={() => ShowDownloads()}
-              >
-                Downloads
-              </Nav.Link>
-              <Nav.Link
-                className={styles.navLinks}
-                onClick={() => ShowAddresses()}
-              >
-                Addresses
-              </Nav.Link>
-              <Nav.Link
-                className={styles.navLinks}
-                onClick={() => ShowAccountDetails()}
-              >
-                Account details
-              </Nav.Link>
-              <Nav.Link
-                className={styles.navLinks}
-                onClick={() => ShowLogOut()}
-              >
-                Log out
-              </Nav.Link>
-            </Nav>
-            <div className={styles.border}></div>
-          </Navbar>
+                <Nav.Link
+                  className={styles.navLinks}
+                  onClick={() => ShowDownloads()}
+                >
+                  Downloads
+                </Nav.Link>
+                <Nav.Link
+                  className={styles.navLinks}
+                  onClick={() => ShowAddresses()}
+                >
+                  Addresses
+                </Nav.Link>
+                <Nav.Link
+                  className={styles.navLinks}
+                  onClick={() => ShowAccountDetails()}
+                >
+                  Account details
+                </Nav.Link>
+                <Nav.Link
+                  className={styles.navLinks}
+                  onClick={() => ShowLogOut()}
+                >
+                  Log out
+                </Nav.Link>
+              </Nav>
+              <div className={styles.border}></div>
+            </Navbar>
+          </Slider>
         </div>
 
         {/************************ Dashboard ***********************/}
@@ -196,7 +242,7 @@ const MyAccountDetails = () => {
                   <button>ADD</button>
                   <p>You have not set up this type of address yet.</p>
                 </Col>
-                <Col xl={6} lg={6} md={6}>
+                <Col xl={6} lg={6} md={6} className={styles.shippingCol}>
                   <h4>Shipping address</h4>
                   <button>ADD</button>
                   <p>You have not set up this type of address yet.</p>
