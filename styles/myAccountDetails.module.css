@@ -5,7 +5,7 @@
   padding-right: 0px;
 }
 
-.myAccountDetailsContainer h3 {
+.myAccountTitle {
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
@@ -44,9 +44,61 @@
   padding-right: 0px !important;
 }
 
+.mobile {
+  text-align: center;
+  margin: auto;
+}
+
+.abc {
+  margin: auto;
+  text-align: center;
+}
+
+.abc2 {
+  text-align: center;
+  display: flex;
+}
+
+.navLink {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #707070;
+  list-style-type: none !important;
+  text-decoration: none !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.navLink:active,
+.navLink:focus {
+  color: #000000 !important;
+  border-bottom: 2px solid #000000 !important;
+  font-weight: bolder !important;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+}
+
 .border {
   width: 100% !important;
   border-bottom: 1px solid #d8d8d8 !important;
+}
+
+.border1 {
+  width: 96% !important;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+
+@media (max-width: 767px) {
+  .myAccountTitle {
+    display: none;
+  }
 }
 
 /************************ Dashboard ***********************/
@@ -75,6 +127,10 @@
   color: #a18a68;
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .navLinks {
     font-size: 18px;
@@ -84,6 +140,12 @@
 }
 
 @media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
   .navLinks {
     font-size: 18px;
     line-height: 26px;
@@ -102,7 +164,7 @@
 }
 
 @media (max-width: 576px) {
-  .myAccountDetailsContainer h3 {
+  .myAccountTitle {
     font-size: 28px;
   }
   .navLinks {
@@ -124,7 +186,7 @@
 }
 
 @media (max-width: 420px) {
-  .myAccountDetailsContainer h3 {
+  .myAccountTitle {
     font-size: 24px;
   }
   .navLinks {
@@ -174,6 +236,52 @@
   font-size: 18px;
   line-height: 21px;
   color: #a18a68;
+  background: none;
+  border: none;
+}
+
+.table {
+  width: 100%;
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+}
+
+.heading {
+  border-bottom: 1px solid #000000;
+}
+.heading th {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.tableRow {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.table td {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.viewOrderButton {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #a18a68 !important;
   background: none;
   border: none;
 }
@@ -407,6 +515,7 @@
   border: none;
   border-radius: 0px !important;
   padding-left: 0px !important;
+  padding-right: 0px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   border-bottom: 1px solid #d8d8d8 !important;
@@ -439,4 +548,31 @@
   border: 1px solid #ffffff;
   border-radius: 4px;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .accountDetails h4 {
+    display: none;
+  }
+}
+@media (max-width: 365px) {
+  .formControl::placeholder {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color: #707070;
+  }
+  .submit {
+    margin-top: 40px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 338px) {
+  .formControl::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+  }
 }

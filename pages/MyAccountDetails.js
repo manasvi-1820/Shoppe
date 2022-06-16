@@ -18,50 +18,30 @@ import styles from "../styles/myAccountDetails.module.css";
 
 const MyAccountDetails = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    autoplay: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 576,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 500,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 2,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 420,
-    //     settings: {
-    //       slidesToScroll: 1,
-    //       slidesToShow: 2,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   const [isActive, setIsActive] = useState(true);
 
   const [dashboard, setDashboard] = useState(true);
   const [orders, setOrders] = useState(false);
+  const [ordersDetails, setOrdersDetails] = useState(false);
   const [downloads, setDownloads] = useState(false);
+  const [downloadsDetails, setDownloadsDetails] = useState(false);
   const [addresses, setAddresses] = useState(false);
   const [accountDetails, setAccountDetails] = useState(false);
   const [logOut, setLogOut] = useState(false);
@@ -84,6 +64,16 @@ const MyAccountDetails = () => {
     setAccountDetails(false);
     setLogOut(false);
     setIsActive(false);
+  };
+
+  const OrderDetails = () => {
+    setOrdersDetails(true);
+    setOrders(false);
+  };
+
+  const DownloadsDetails = () => {
+    setDownloadsDetails(true);
+    setDownloads(false);
   };
 
   const ShowDownloads = () => {
@@ -132,10 +122,10 @@ const MyAccountDetails = () => {
       <Header border={true} />
 
       <Container className={styles.myAccountDetailsContainer}>
-        <h3>My Account</h3>
+        <h3 className={styles.myAccountTitle}>My Account</h3>
 
-        <div className={styles.navbarMain}>
-          <Slider {...settings}>
+        <div className={styles.desktop}>
+          <div className={styles.navbarMain}>
             <Navbar>
               <Nav className={styles.accountDetails}>
                 <Nav.Link
@@ -159,6 +149,7 @@ const MyAccountDetails = () => {
                 >
                   Downloads
                 </Nav.Link>
+
                 <Nav.Link
                   className={styles.navLinks}
                   onClick={() => ShowAddresses()}
@@ -180,7 +171,68 @@ const MyAccountDetails = () => {
               </Nav>
               <div className={styles.border}></div>
             </Navbar>
-          </Slider>
+          </div>
+        </div>
+
+        <div className={styles.mobile}>
+          <div className={styles.abc1}>
+            <Slider {...settings} className="accountArrow">
+              <div className={styles.abc}>
+                <Nav.Link
+                  className={styles.navLink}
+                  onClick={() => ShowDashboard()}
+                  active={isActive}
+                >
+                  Dashboard
+                </Nav.Link>
+              </div>
+              <div className={styles.abc}>
+                <Nav.Link
+                  className={styles.navLink}
+                  onClick={() => ShowOrders()}
+                >
+                  Orders
+                </Nav.Link>
+              </div>
+
+              <div className={styles.abc}>
+                <Nav.Link
+                  className={styles.navLink}
+                  onClick={() => ShowDownloads()}
+                >
+                  Downloads
+                </Nav.Link>
+              </div>
+
+              <div className={styles.abc}>
+                <Nav.Link
+                  className={styles.navLink}
+                  onClick={() => ShowAddresses()}
+                >
+                  Addresses
+                </Nav.Link>
+              </div>
+
+              <div className={styles.abc}>
+                <Nav.Link
+                  className={styles.navLink}
+                  onClick={() => ShowAccountDetails()}
+                >
+                  Account details
+                </Nav.Link>
+              </div>
+
+              <div className={styles.abc}>
+                <Nav.Link
+                  className={styles.navLink}
+                  onClick={() => ShowLogOut()}
+                >
+                  Log out
+                </Nav.Link>
+              </div>
+            </Slider>
+          </div>
+          <div className={styles.border1}></div>
         </div>
 
         {/************************ Dashboard ***********************/}
@@ -213,8 +265,47 @@ const MyAccountDetails = () => {
           <>
             <div className={styles.orders}>
               <h3>No order has been made yet.</h3>
-              <button>BROWSE PRODUCT</button>
+              <button onClick={() => OrderDetails()}>BROWSE PRODUCT</button>
             </div>
+          </>
+        )}
+
+        {ordersDetails && (
+          <>
+            <table className={styles.table}>
+              <thead>
+                <tr className={styles.heading}>
+                  <th>ORDER NUMBER</th>
+                  <th colSpan="2">DATE</th>
+                  <th colSpan="4">STATUS</th>
+                  <th colSpan="4">TOTAL</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className={styles.tableRow}>
+                  <td>7643980998990</td>
+                  <td colSpan="2">October 8,2021</td>
+                  <td colSpan="4">Delivered</td>
+                  <td colSpan="4">$ 105</td>
+                  <td className={styles.viewOrderButton}>View Order</td>
+                </tr>
+                <tr className={styles.tableRow}>
+                  <td>943980998990</td>
+                  <td colSpan="2">October 8,2021</td>
+                  <td colSpan="4">Processing</td>
+                  <td colSpan="4">$ 100</td>
+                  <td className={styles.viewOrderButton}>View Order</td>
+                </tr>
+                <tr>
+                  <td>879980998990</td>
+                  <td colSpan="2">October 8,2020</td>
+                  <td colSpan="4">Delivered</td>
+                  <td colSpan="4">$ 65</td>
+                  <td className={styles.viewOrderButton}>View Order</td>
+                </tr>
+              </tbody>
+            </table>
           </>
         )}
 
@@ -223,8 +314,53 @@ const MyAccountDetails = () => {
           <>
             <div className={styles.downloads}>
               <h3>No downloads available yet.</h3>
-              <button>BROWSE PRODUCT</button>
+              <button onClick={() => DownloadsDetails()}>BROWSE PRODUCT</button>
             </div>
+          </>
+        )}
+
+        {downloadsDetails && (
+          <>
+            <table className={styles.table}>
+              <thead>
+                <tr className={styles.heading}>
+                  <th>ORDER NUMBER</th>
+                  <th colSpan="2">DATE</th>
+                  <th colSpan="4">STATUS</th>
+                  <th colSpan="4">TOTAL</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className={styles.tableRow}>
+                  <td>7643980998990</td>
+                  <td colSpan="2">October 8,2021</td>
+                  <td colSpan="4">Delivered</td>
+                  <td colSpan="4">$ 105</td>
+                  <td className={styles.viewOrderButton}>
+                    View Order | Download
+                  </td>
+                </tr>
+                <tr className={styles.tableRow}>
+                  <td>943980998990</td>
+                  <td colSpan="2">October 8,2021</td>
+                  <td colSpan="4">Processing</td>
+                  <td colSpan="4">$ 100</td>
+                  <td className={styles.viewOrderButton}>
+                    View Order | Download
+                  </td>
+                </tr>
+                <tr>
+                  <td>879980998990</td>
+                  <td colSpan="2">October 8,2020</td>
+                  <td colSpan="4">Delivered</td>
+                  <td colSpan="4">$ 65</td>
+                  <td className={styles.viewOrderButton}>
+                    View Order | Download
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </>
         )}
 
@@ -256,7 +392,13 @@ const MyAccountDetails = () => {
         {accountDetails && (
           <>
             <div className={styles.accountDetails}>
-              <Col xl={{ span: 6, offset: 3 }}>
+              <Col
+                xl={{ span: 6, offset: 3 }}
+                lg={{ span: 8, offset: 2 }}
+                md={{ span: 8, offset: 2 }}
+                sm={12}
+                xs={12}
+              >
                 <h4>Account details</h4>
                 <Form>
                   <Form.Group className="mb-3" controlId="formBasicEmail">

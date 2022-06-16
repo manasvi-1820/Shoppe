@@ -114,7 +114,13 @@ const Blog = () => {
                   return (
                     <>
                       {firstPage && (
-                        <Col xl={6} lg={6} md={12} className={styles.blogCol}>
+                        <Col
+                          xl={6}
+                          lg={6}
+                          md={12}
+                          className={styles.blogCol}
+                          key={"col" + index}
+                        >
                           <div className={styles.imageDiv}>
                             <img
                               src={item.image}

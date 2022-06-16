@@ -33,7 +33,13 @@ const OurStory = () => {
 
             {blog.map((item, index) => {
               if (index == 3) {
-                return <img src={item.image} className={styles.image} />;
+                return (
+                  <img
+                    src={item.image}
+                    className={styles.image}
+                    key={index + "blog1"}
+                  />
+                );
               }
             })}
 
@@ -57,7 +63,13 @@ const OurStory = () => {
             <h4>Produced with care</h4>
             {blog.map((item, index) => {
               if (index == 0) {
-                return <img src={item.image} className={styles.image} />;
+                return (
+                  <img
+                    src={item.image}
+                    className={styles.image}
+                    key={index + "blog2"}
+                  />
+                );
               }
             })}
             <p>

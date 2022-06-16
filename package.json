@@ -27,6 +27,7 @@
     "react-search-box": "^2.2.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

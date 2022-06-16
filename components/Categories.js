@@ -51,10 +51,10 @@ const Categories = () => {
     <Container className={styles.categoriesContainer}>
       <Row>
         <Slider {...settings}>
-          {categories.map((item) => {
+          {categories.map((item, index) => {
             return (
               <>
-                <div className={styles.sliderDiv}>
+                <div className={styles.sliderDiv} key={index + "category"}>
                   <button className={styles.button}>{item.button}</button>
                 </div>
               </>

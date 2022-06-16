@@ -20,7 +20,7 @@
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.focus {
   /* color: blue !important; */
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #000000 !important;
   font-weight: bolder !important;
 }
 
@@ -120,6 +120,42 @@
   color: white !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-next {
+  right: -12px !important;
+}
+
+.slick-prev {
+  left: -12px !important;
+}
+
+.accountArrow .slick-prev:before {
+  content: url("../public/Images/arrowAccountLeft.svg") !important;
+}
+
+.accountArrow .slick-next:before {
+  content: url("../public/Images/arrowAccount.svg") !important;
+}
+
+.accountArrow .nav-link.active,
+.accountArrow .nav-link.focus {
+  color: #000000 !important;
+  border-bottom: 2px solid #000000 !important;
+  font-weight: bolder !important;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
 }
 
 .slick-dots li.slick-active button:before {

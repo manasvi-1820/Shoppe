@@ -67,8 +67,15 @@ const BlogDetails = () => {
               October 8,2020
             </p>
             <Slider {...settings}>
-              {blog.map((item) => {
-                return <img src={item.image} className={styles.sliderImage} />;
+              {blog.map((item, index) => {
+                return (
+                  <img
+                    key={index + "blog"}
+                    src={item.image}
+                    className={styles.sliderImage}
+                    key="abcd"
+                  />
+                );
               })}
             </Slider>
             <p className={styles.loremIpsum}>
@@ -87,7 +94,11 @@ const BlogDetails = () => {
               {blog.map((item, index) => {
                 if (index === 3)
                   return (
-                    <img src={item.image} className={styles.sliderImage1} />
+                    <img
+                      src={item.image}
+                      className={styles.sliderImage1}
+                      key={"xyx" + index}
+                    />
                   );
               })}
             </div>
@@ -195,7 +206,14 @@ const BlogDetails = () => {
                   return (
                     <>
                       <Row className={styles.commentsRow}>
-                        <Col xl={2} lg={2} md={2} sm={2} xs={3}>
+                        <Col
+                          xl={2}
+                          lg={2}
+                          md={2}
+                          sm={2}
+                          xs={3}
+                          key={index + "comments"}
+                        >
                           <div>
                             <img
                               src={item.image}

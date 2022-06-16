@@ -33,10 +33,10 @@ const GoldBigHoops = () => {
       <Container className={styles.goldContainer}>
         <Row className={styles.goldRow}>
           <Slider {...settings}>
-            {gold.map((item) => {
+            {gold.map((item, index) => {
               return (
                 <>
-                  <div className={styles.sliderDiv}>
+                  <div className={styles.sliderDiv} key={index + "gold"}>
                     <img src={item.image} className={styles.goldImage} />
                     <img src={item.image1} className={styles.goldHoopsImage} />
                     <img src={item.image2} className={styles.goldHoopsImage2} />

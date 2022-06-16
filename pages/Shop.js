@@ -203,7 +203,7 @@ const Shop = () => {
           <Col xl={9} lg={9} md={12} className={styles.productsCol}>
             <Container className={styles.productsContainer}>
               <Row className={styles.productsRow}>
-                {products.map((item) => {
+                {products.map((item, index) => {
                   return (
                     <>
                       <Col
@@ -213,6 +213,7 @@ const Shop = () => {
                         sm={6}
                         xs={6}
                         className={styles.productsCol}
+                        key={index + "productsCol"}
                       >
                         <div className={styles.imageDiv}>
                           <Link href={`/product-details/${item.id}`}>
