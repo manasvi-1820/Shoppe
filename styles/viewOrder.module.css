@@ -1,0 +1,289 @@
+.viewOrderContainer {
+  padding-top: 70px;
+  padding-bottom: 160px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.viewOrderCol1 {
+  margin-top: 20px;
+}
+
+.viewOrderContainer h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.orderSummary {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.orderSummaryMobile {
+  display: none;
+}
+
+.viewOrderCol1 h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.orderNo {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.viewOrderCol1 p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.viewOrderCol2 {
+  margin-top: 20px;
+}
+
+.viewOrderCol2 h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.deliveryOptions {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.viewOrderCol2 p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #707070;
+}
+
+.viewOrderCol3 {
+  margin-top: 20px;
+}
+
+.viewOrderCol3Div {
+  background: #efefef;
+  padding: 30px 60px;
+}
+
+.viewOrderDiv {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.viewOrderCol3 h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.viewOrderCol3 p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #707070;
+}
+
+.earringsDiv {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.earrings {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalDiv {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalDiv h6 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.deliveryDetails {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .orderSummary {
+    display: none;
+  }
+  .orderSummaryMobile {
+    display: block;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .viewOrderContainer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .deliveryDetails {
+    display: block;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  .viewOrderContainer h4 {
+    text-align: center;
+  }
+  .viewOrderCol1 {
+    text-align: center;
+  }
+  .viewOrderCol2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .viewOrderContainer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .viewOrderCol1 {
+    margin-top: 5px;
+  }
+  .viewOrderContainer h4 {
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .viewOrderCol1 h5 {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 10px;
+  }
+  .orderNo {
+    font-size: 14px;
+    line-height: 10px;
+  }
+  .viewOrderCol1 p {
+    font-size: 13px;
+    line-height: 27px;
+  }
+
+  .viewOrderCol2 {
+    margin-top: 10px;
+  }
+  .viewOrderCol2 h5 {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 10px;
+  }
+  .deliveryOptions {
+    font-size: 14px;
+    line-height: 10px;
+  }
+  .viewOrderCol2 p {
+    font-size: 13px;
+    line-height: 27px;
+  }
+
+  .viewOrderCol3 {
+    margin-top: 10px;
+  }
+  .orderSummaryMobile {
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .viewOrderDiv {
+    padding-top: 5px;
+  }
+  .earringsDiv {
+    padding-top: 10px;
+  }
+  .earrings {
+    padding-top: 5px;
+  }
+  .totalDiv {
+    padding-top: 10px;
+  }
+  .totalDiv h6 {
+    font-size: 14px;
+    line-height: 10px;
+  }
+  .viewOrderCol3Div {
+    padding: 20px 20px;
+  }
+  .viewOrderCol3 h5 {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .viewOrderCol3 p {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .viewOrderCol3Div {
+    padding: 10px 10px;
+  }
+}

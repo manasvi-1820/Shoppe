@@ -213,6 +213,7 @@ const Header = (props) => {
             </div>
 
             <Navbar.Offcanvas
+              style={{ transition: "0.8s" }}
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
               placement="end"

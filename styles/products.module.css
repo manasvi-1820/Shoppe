@@ -96,7 +96,7 @@
   top: 0;
   bottom: auto;
   padding-top: 45%;
-  padding-left: 30%;
+  padding-left: 33%;
   opacity: 0;
   height: 100%;
   width: 100%;
@@ -114,24 +114,24 @@
   border-radius: 4px 4px 0px 0px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
   .hoverDiv {
     top: 0;
     bottom: auto;
     padding-top: 45%;
-    padding-left: 27%;
+    padding-left: 31%;
     height: 100%;
     width: 100%;
   }
 }
 @media (max-width: 1199px) {
   .hoverDiv {
-    top: 0;
-    bottom: auto;
-    padding-top: 45%;
-    padding-left: 29%;
-    height: 100%;
-    width: 100%;
+    padding-left: 27%;
+  }
+}
+@media (max-width: 992px) {
+  .hoverDiv {
+    padding-left: 30%;
   }
 }
 
